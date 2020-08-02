@@ -2,21 +2,20 @@
 
 namespace App\Http\Controllers\System;
 
+use App\Http\Controllers\ApiController;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PackageRequest;
 use App\Models\Package;
 use Illuminate\Http\Request;
 
-class PackageController extends Controller
+class PackageController extends ApiController
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+
      */
     public function index()
     {
-        //
+        return $this->json(Package::all());
     }
 
     /**
@@ -31,7 +30,7 @@ class PackageController extends Controller
         $package->name = $request->name;
         $package->save();
 
-        return $request->input();
+        return $this->success('发表成功',$package->toArray());
     }
 //    protected function validateForm($request){
 //        $request->validate([
@@ -45,9 +44,9 @@ class PackageController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Package $package)
     {
-        //
+        return $this->json($package);
     }
 
     /**
@@ -57,9 +56,13 @@ class PackageController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PackageRequest $request, Package $package)
     {
-        //
+
+        $package->name = $request->name;
+        $package->save();
+
+        return $this->success('更新成功',$package->toArray());
     }
 
     /**
@@ -68,8 +71,9 @@ class PackageController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Package $package)
     {
-        //
+        $package->delete();
+        return $this->success('删除成功');
     }
 }

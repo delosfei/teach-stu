@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class PackageRequest extends FormRequest
 {
@@ -24,7 +25,7 @@ class PackageRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'min:3', 'max:20'],
+            'name' => ['required', 'min:3', 'max:20',Rule::unique('packages')->ignore(request()->package)]
         ];
     }
     public function messages(){
