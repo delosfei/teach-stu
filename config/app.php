@@ -135,6 +135,8 @@ return [
     */
 
     'providers' => [
+        'Mews\Captcha\CaptchaServiceProvider',
+
 
         /*
          * Laravel Framework Service Providers...

@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['namespace'=>'Account','middleware'=>['guest']],function (){
+   Route::resource('login','LoginController')->only('index','store');
+   Route::resource('register','RegisterController')->only('index','store');
+
+});
