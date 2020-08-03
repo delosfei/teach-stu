@@ -12,10 +12,12 @@
                     </div>
                     <div class="card-body">
                         <x-input title="帐号" name="account" placeholder="请输入邮箱或手机号"></x-input>
-                        <x-input title="密码" name="password" placeholder="请输入登录密码"></x-input>
-                        <x-input type="captcha" title="图形验证码" name="password" placeholder="请输入图形验证码"></x-input>
+                        <x-input type="password" title="密码" name="password" placeholder="请输入登录密码"></x-input>
+                        <x-input theme="captcha" title="图形验证码" name="password" placeholder="请输入图形验证码"></x-input>
 
-
+                        <label for="remember">
+                            <input type="checkbox" name="remember"> 记住我
+                        </label>
                     </div>
                     <div class="card-footer text-muted d-flex justify-content-between align-items-center">
                         <button class="btn btn-success">登录</button>

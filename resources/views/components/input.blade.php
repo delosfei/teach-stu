@@ -1,6 +1,6 @@
 <div class="form-group">
     <label for="{{$attributes['name']}}">{{$attributes['title']}}</label>
-    <input type="text"
+    <input type="{{$attributes['type']}}"
            class="form-control" name="{{$attributes['name']}}" id="{{$attributes['name']}}"
            placeholder="{{$attributes['placeholder']}}" value="{{ old($attributes['name']) }}">
     @error($attributes['name'])
