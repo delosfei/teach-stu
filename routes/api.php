@@ -21,6 +21,7 @@ Route::group(
     ['namespace' => 'System', 'prefix' => 'system', 'middleware' => ['auth:sanctum']],
     function () {
         Route::apiResource('package', 'PackageController');
+        Route::apiResource('group', 'GroupController');
     }
 );
 Route::group(

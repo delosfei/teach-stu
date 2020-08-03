@@ -11,7 +11,6 @@ use Illuminate\Http\Request;
 class PackageController extends ApiController
 {
     /**
-
      */
     public function index()
     {
@@ -30,7 +29,7 @@ class PackageController extends ApiController
         $package->name = $request->name;
         $package->save();
 
-        return $this->success('发表成功',$package->toArray());
+        return $this->success('发表成功', $package->toArray());
     }
 //    protected function validateForm($request){
 //        $request->validate([
@@ -62,18 +61,14 @@ class PackageController extends ApiController
         $package->name = $request->name;
         $package->save();
 
-        return $this->success('更新成功',$package->toArray());
+        return $this->success('更新成功', $package->toArray());
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Package $package)
     {
         $package->delete();
+
         return $this->success('删除成功');
     }
 }

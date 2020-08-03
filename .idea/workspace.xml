@@ -14,22 +14,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52426d7e-9439-4f4f-9273-bb22fa4378d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/sanctum.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/teach-stu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/teach-stu.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/System/GroupController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Group.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/GroupFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_03_080346_create_groups_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_03_081540_create_group_user_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/GroupSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/System/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/System/PackageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PackageSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PackageSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,11 +161,11 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\15066\code\teach-stu\resources\lang" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\15066\code\teach-stu\app\Http\Controllers\System" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\15066\code\teach-stu\resources\lang" />
     </key>
   </component>
   <component name="RunManager">
@@ -189,7 +183,8 @@
       <option name="presentableId" value="Default" />
       <updated>1596288729315</updated>
       <workItem from="1596288730583" duration="8674000" />
-      <workItem from="1596335474537" duration="15441000" />
+      <workItem from="1596335474537" duration="16382000" />
+      <workItem from="1596412462031" duration="5321000" />
     </task>
     <servers />
   </component>
@@ -219,6 +214,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="509" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596292332638" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596416089648">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596416089648" />
     <state x="542" y="154" key="FileChooserDialogImpl" timestamp="1596345069999">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -231,9 +230,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="540" key="StructurePopup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596371822135" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596372868376">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596417732497">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596372868376" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596417732497" />
   </component>
 </project>
