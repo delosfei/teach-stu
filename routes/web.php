@@ -28,3 +28,9 @@ Route::group(
 
     }
 );
+Route::group(
+    ['namespace' => 'Common', 'prefix' => 'common', 'as' => 'common.'],
+    function () {
+        Route::post('code', 'VerificationCodeController@send')->name('code.send');
+    }
+);

@@ -9,9 +9,16 @@
     <link rel="stylesheet" href="{{mix('/css/app.css')}}">
 </head>
 <body>
-<div class="account d-flex align-items-center">
+<div class="account d-flex align-items-center" id="app">
+
     <div class="container mt-3">
-        @yield('content')
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                @include('layouts.message')
+                @yield('content')
+
+            </div>
+        </div>
     </div>
 </div>
 <script src="{{mix('/js/app.js')}}"></script>

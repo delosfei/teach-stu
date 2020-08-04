@@ -27,8 +27,8 @@ class LoginController extends Controller
     {
         $request->validate(
             [
-                'account' => ['required', new AccountRule()],
-                'password' => ['required', 'min:3'],
+                //'account' => ['required', new AccountRule()],
+               // 'password' => ['required', 'min:3'],
                 // 'captcha'=>['required','captcha']
             ]
         );
@@ -37,7 +37,7 @@ class LoginController extends Controller
 
             return redirect()->intended('/');
         }
-        return back()->with('error','账号或密码不正确');
+        return back()->with('danger','账号或密码不正确');
 
     }
 

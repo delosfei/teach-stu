@@ -1,11 +1,11 @@
 @extends('layouts.account')
 @section('title','会员登录')
 @section('content')
-    <form action="{{route('login.store')}}" method="post">
-        @csrf
 
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6">
+
+
+                <form action="{{route('login.store')}}" method="post">
+                    @csrf
                 <div class="card shadow">
                     <div class="card-header">
                         会员登录
@@ -27,8 +27,7 @@
                         </div>
                     </div>
                 </div>
+                </form>
 
-            </div>
-        </div>
-    </form>
+
 @endsection
