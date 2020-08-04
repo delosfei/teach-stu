@@ -14,20 +14,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52426d7e-9439-4f4f-9273-bb22fa4378d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Common/VerificationCodeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Register.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/VerificationCode.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/message.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Account/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Account/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Account/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Account/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/VerificationCode.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/VerificationCode.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/account/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/account.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +195,7 @@
       <workItem from="1596335474537" duration="16382000" />
       <workItem from="1596412462031" duration="6646000" />
       <workItem from="1596419114639" duration="11519000" />
-      <workItem from="1596435637506" duration="32022000" />
+      <workItem from="1596435637506" duration="35861000" />
     </task>
     <servers />
   </component>
@@ -232,6 +225,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="509" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596292332638" />
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596550120387">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596550120387" />
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596416089648">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -264,10 +261,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="540" key="StructurePopup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596371822135" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596546327042">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596548829762">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596546327042" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596548829762" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

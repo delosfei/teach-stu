@@ -22,12 +22,15 @@ class RegisterController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'code'=>['required'],
-            'account'=>['required','string'],
-            'password'=>['required','confirmed'],
-            'name'=>['required','string'],
-        ]);
+        dd($request->all());
+        $request->validate(
+            [
+                'code' => ['required'],
+                'account' => ['required', 'string'],
+                'password' => ['required', 'confirmed'],
+                'name' => ['required', 'string'],
+            ]
+        );
     }
 
 

@@ -1931,24 +1931,45 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    VerificationCode: _VerificationCode__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
   data: function data() {
     return {
-      form: {
-        code: "",
-        account: "abc",
-        captcha: ""
-      }
+      account: '',
+      code: '',
+      captcha: '',
+      password: '',
+      password_confirmed: ''
     };
-  },
-  methods: {
-    sendCode: function sendCode() {
-      alert(3);
-    }
   }
 });
 
@@ -1963,37 +1984,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -37606,163 +37596,84 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("verification-code", { attrs: { form: _vm.form } }),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "password" } }, [_vm._v("密码")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.form.password,
-              expression: "form.password"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text", id: "password", placeholder: "请输入密码" },
-          domProps: { value: _vm.form.password },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+  return _c("div", { staticClass: "card shadow" }, [
+    _c("div", { staticClass: "card-header" }, [
+      _vm._v("\n        会员注册\n    ")
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "card-body" }, [
+      _c("div", [
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", [_vm._v("手机号/邮箱")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.account,
+                expression: "account"
               }
-              _vm.$set(_vm.form, "password", $event.target.value)
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "text",
+              name: "account",
+              placeholder: "请输入手机号或邮箱",
+              value: "请输入手机号或邮箱"
+            },
+            domProps: { value: _vm.account },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.account = $event.target.value
+              }
             }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "password_confirmation" } }, [
-          _vm._v("确认密码")
+          })
         ]),
         _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.form.password_confirmation,
-              expression: "form.password_confirmation"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: {
-            type: "text",
-            id: "password_confirmation",
-            placeholder: "请输入确认密码"
-          },
-          domProps: { value: _vm.form.password_confirmation },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "code" } }, [_vm._v("验证码")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "input-group mb-3" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.code,
+                  expression: "code"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                name: "code",
+                id: "code",
+                placeholder: "请填写收到的验证码"
+              },
+              domProps: { value: _vm.code },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.code = $event.target.value
+                }
               }
-              _vm.$set(_vm.form, "password_confirmation", $event.target.value)
-            }
-          }
-        })
-      ])
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/VerificationCode.vue?vue&type=template&id=3bba7113&scoped=true&":
-/*!*******************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/VerificationCode.vue?vue&type=template&id=3bba7113&scoped=true& ***!
-  \*******************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "account" } }, [_vm._v("帐号")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.form.account,
-            expression: "form.account"
-          }
-        ],
-        staticClass: "form-control",
-        attrs: {
-          type: "text",
-          name: "account",
-          id: "account",
-          placeholder: "请输入手机号或邮箱",
-          value: "请输入手机号或邮箱"
-        },
-        domProps: { value: _vm.form.account },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.$set(_vm.form, "account", $event.target.value)
-          }
-        }
-      })
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "code" } }, [_vm._v("验证码")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "input-group mb-3" }, [
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.form.code,
-              expression: "form.code"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: {
-            type: "text",
-            name: "code",
-            id: "code",
-            placeholder: "请填写收到的验证码"
-          },
-          domProps: { value: _vm.form.code },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.form, "code", $event.target.value)
-            }
-          }
-        }),
+            }),
+            _vm._v(" "),
+            _vm._m(0)
+          ])
+        ]),
         _vm._v(" "),
-        _vm._m(0)
+        _vm._m(1)
       ])
     ]),
     _vm._v(" "),
-    _vm._m(1)
+    _vm._m(2)
   ])
 }
 var staticRenderFns = [
@@ -37805,17 +37716,59 @@ var staticRenderFns = [
           [
             _c("img", {
               staticClass: "border rounded-right",
-              attrs: {
-                src: "/captcha/",
-                onclick: "this.src='/captcha?_'+Math.random()"
-              }
+              attrs: { src: "/captcha/" }
             })
           ]
         )
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "card-footer text-muted d-flex justify-content-between align-items-center"
+      },
+      [
+        _c("button", { staticClass: "btn btn-success" }, [_vm._v("注册")]),
+        _vm._v(" "),
+        _c("div", [
+          _c("a", { attrs: { href: "/login" } }, [_vm._v("登录")]),
+          _vm._v(" |\n            "),
+          _c("a", { attrs: { href: "" } }, [_vm._v("找回密码")])
+        ])
+      ]
+    )
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/VerificationCode.vue?vue&type=template&id=3bba7113&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/VerificationCode.vue?vue&type=template&id=3bba7113&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div")
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -50006,10 +49959,13 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('Register', __webpack_require__(/*! ./components/Register.vue */ "./resources/js/components/Register.vue")["default"]);
+var files = __webpack_require__("./resources/js/components sync recursive \\.vue$/");
+
+files.keys().map(function (key) {
+  return Vue.component(key.split('/').pop().split('.')[0], files(key)["default"]);
+}); // Vue.component('Register', require('./components/Register.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -50064,6 +50020,40 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components sync recursive \\.vue$/":
+/*!**********************************************!*\
+  !*** ./resources/js/components sync \.vue$/ ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./Register.vue": "./resources/js/components/Register.vue",
+	"./VerificationCode.vue": "./resources/js/components/VerificationCode.vue"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./resources/js/components sync recursive \\.vue$/";
 
 /***/ }),
 
