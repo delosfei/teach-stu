@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Account;
 
-use App\Http\Controllers\Controller;
 use App\Rules\AccountRule;
 use App\Services\UserService;
 use Illuminate\Http\Request;
@@ -28,27 +27,21 @@ class LoginController extends Controller
         $request->validate(
             [
                 //'account' => ['required', new AccountRule()],
-               // 'password' => ['required', 'min:3'],
+                // 'password' => ['required', 'min:3'],
                 // 'captcha'=>['required','captcha']
             ]
         );
-        $isLogin = Auth::attempt([$this->username() => $request->account, 'password' => $request->password],(bool) $request->remember);
+        $isLogin = Auth::attempt(
+            [$this->username() => $request->account, 'password' => $request->password],
+            (bool)$request->remember
+        );
         if ($isLogin) {
 
             return redirect()->intended('/');
         }
-        return back()->with('danger','账号或密码不正确');
 
-    }
+        return back()->with('danger', '账号或密码不正确');
 
-    protected function username()
-    {
-        return filter_var(request()->account, FILTER_VALIDATE_EMAIL) ? 'email' : 'mobile';
-    }
-
-    protected function validateAccountField()
-    {
-        return filter_var(request()->account, FILTER_VALIDATE_EMAIL) ? 'email' : 'regex:/^1\d{10}$/';
     }
 
 

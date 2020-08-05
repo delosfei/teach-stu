@@ -25,12 +25,8 @@ Route::group(
     function () {
         Route::resource('login', 'LoginController')->only('index', 'store');
         Route::resource('register', 'RegisterController')->only('index', 'store');
+        Route::post('register/code','RegisterController@code');
 
     }
 );
-Route::group(
-    ['namespace' => 'Common', 'prefix' => 'common', 'as' => 'common.'],
-    function () {
-        Route::post('code', 'VerificationCodeController@send')->name('code.send');
-    }
-);
+

@@ -8,38 +8,55 @@
                 <div class="form-group">
                     <label>手机号/邮箱</label>
                     <input type="text"
-                           class="form-control" name="account"
-                           placeholder="请输入手机号或邮箱" value="请输入手机号或邮箱" v-model="account">
-                    <!--            <small id="helpId" class="form-text text-danger">{{ $message }}</small>-->
+                           class="form-control is-invalid" name="account"
+                           placeholder="请输入手机号或邮箱" v-model="account">
+                    <strong class="invalid-feedback">ssd</strong>
+
+                </div>
+
+                <div class="form-group captcha">
+                    <label for="captcha">图形验证码</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="captcha" id="captcha"
+                               placeholder="请输入图形验证码">
+                        <div class="input-group-append" @click="updateCaptcha">
+                            <img :src="captchaImage" class="border rounded-right">
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="form-group">
                     <label for="code">验证码</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3 captcha">
                         <input type="text" class="form-control" name="code" id="code" placeholder="请填写收到的验证码"
                                v-model="code">
-                        <div class="input-group-append">
+                        <div class="input-group-append" @click="sendCode">
                             <span class="input-group-text" id="basic-addon2">发送验证码</span>
                         </div>
 
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="captcha">图形验证码</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="captcha" id="captcha"
-                               placeholder="请输入图形验证码">
-                        <div class="input-group-append" style="cursor:pointer">
-                            <img src="/captcha/" class="border rounded-right">
-                        </div>
-                    </div>
-                    <!--            <small id="helpId" class="form-text text-danger">{{$message}}</small>-->
+            </div>
+            <el-divider><i class="el-icon-mobile-phone"></i></el-divider>
 
-                </div>
+            <div class="form-group">
+                <label for="">密码</label>
+                <input type="text"
+                       class="form-control" v-model="password" placeholder="请输入密码"/>
+
+
+            </div>
+            <div class="form-group">
+                <label for="">确认密码</label>
+                <input type="text"
+                       class="form-control" v-model="password_confirmation" placeholder="请输入确认密码"/>
             </div>
 
         </div>
+
+
         <div class="card-footer text-muted d-flex justify-content-between align-items-center">
             <button class="btn btn-success">注册</button>
             <div>
@@ -50,7 +67,6 @@
     </div>
 </template>
 <script>
-import VerificationCode from "./VerificationCode";
 
 export default {
     data() {
@@ -58,10 +74,28 @@ export default {
             account: '',
             code: '',
             captcha: '',
+            captchaImage: '/captcha',
             password: '',
-            password_confirmed: ''
+            password_confirmation: ''
+        }
+    },
+    methods: {
+        updateCaptcha() {
+            this.captchaImage = '/captcha?' + Math.random()
+        },
+        sendCode(){
+           this.axios.post('/register/code').then(r=>{
+               console.log(r)
+           })
         }
     }
 
 }
 </script>
+<style lang="scss" scoped>
+.captcha {
+    .input-group-append {
+        cursor: pointer;
+    }
+}
+</style>

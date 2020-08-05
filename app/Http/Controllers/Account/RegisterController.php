@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Account;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -22,7 +21,7 @@ class RegisterController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+
         $request->validate(
             [
                 'code' => ['required'],
@@ -33,27 +32,13 @@ class RegisterController extends Controller
         );
     }
 
-
-    public function show($id)
+    public function code(Request $request)
     {
-        //
-    }
-
-
-    public function edit($id)
-    {
-        //
-    }
-
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-
-    public function destroy($id)
-    {
-        //
+        $request->validate(
+            [
+                'account' => ['required',$this->validateAccountField()],
+                'captcha' => ['required','captcha'],
+            ]
+        );
     }
 }
