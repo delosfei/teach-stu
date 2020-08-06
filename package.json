@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "element-ui": "^2.13.2"
+        "element-ui": "^2.13.2",
+        "vuex": "^3.5.1"
     }
 }

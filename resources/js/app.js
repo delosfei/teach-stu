@@ -5,8 +5,10 @@
  */
 
 require('./bootstrap');
+import store from './store';
+import Vue from 'vue';
 
-window.Vue = require('vue');
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -28,5 +30,6 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    store
 });

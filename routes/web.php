@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Services\CodeService;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get(
+    'mail',
+    function () {
+        app(CodeService::class)->send('9739723@qq.com');
+    }
+);
 
 Route::get(
     '/',
@@ -21,11 +28,11 @@ Route::get(
 )->name('home');
 
 Route::group(
-    ['namespace' => 'Account', 'middleware' => ['guest']],
+    ['namespace' => 'Account'],
     function () {
         Route::resource('login', 'LoginController')->only('index', 'store');
         Route::resource('register', 'RegisterController')->only('index', 'store');
-        Route::post('register/code','RegisterController@code');
+        Route::post('register/code', 'RegisterController@code')->middleware(['throttle:1,1']);
 
     }
 );

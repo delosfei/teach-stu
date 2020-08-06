@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import axios from 'axios';
 import loading from "./loading";
+import store from '../store';
+import {Message} from 'element-ui';
+import httpStatus from './httpStatus';
 
 window.axios = axios;
 
@@ -28,8 +31,27 @@ _axios.interceptors.request.use(function (config) {
 
 _axios.interceptors.response.use(function (response) {
     loading.close()
+    Message({
+        message: response.data.message,
+        type: 'success'
+    });
     return response;
 }, function (error) {
     loading.close()
+    let status = error.response.status;
+    let data = error.response.data;
+    switch (status) {
+        case 422:
+            store.commit('setErrors', data.errors)
+            break
+        default:
+            let message=data.message?data.message:httpStatus(status)
+            Message({
+                message,
+                type: 'error'
+            });
+    }
+
+
     return Promise.reject(error);
 });
