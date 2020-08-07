@@ -13,8 +13,12 @@
 <body>
 <div class="admin">
     @include('layouts.admin.header')
-    @include('layouts.admin.quick-menu')
-    <div class="bg-white rounded shadow m-3 p-3">
+
+    <div class="d-sm-block d-none">
+        @include('layouts.admin.quick-menu')
+    </div>
+
+    <div class="bg-white rounded shadow m-3 p-3 {{route_class()}}" id="app">
 
         @yield('content')
     </div>

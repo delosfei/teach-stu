@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    public function __construct(){
+        $this->middleware('guest')->except('logout');
+        $this->middleware('auth')->only('logout');
+    }
 
     public function index()
     {
@@ -42,6 +46,13 @@ class LoginController extends Controller
 
         return back()->with('danger', '账号或密码不正确');
 
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+
+        return redirect('/');
     }
 
 

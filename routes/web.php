@@ -28,16 +28,22 @@ Route::get(
 )->name('home');
 
 Route::group(
-    ['namespace' => 'Account','middleware'=>['guest']],
+    ['namespace' => 'Account'],
     function () {
-        Route::resource('login', 'LoginController')->only('index', 'store');
-        Route::resource('register', 'RegisterController')->only('index', 'store');
+        Route::resource('login', 'LoginController')->only('index', 'store')->names([
+            'index'=>'login'
+        ]);
+        Route::get('logout','LoginController@logout')->name('logout');
+        Route::resource('register', 'RegisterController')->only('index', 'store')->names([
+            'index'=>'register'
+        ]);
         Route::post('register/code', 'RegisterController@code')->middleware(['throttle:1,1']);
 
     }
 );
 
-Route::group(['prefix'=>'admin','middleware'=>['auth'],'namespace'=>'Admin'],function (){
-    Route::get('/','HomeController@index')->name('admin');
+Route::group(['prefix'=>'admin','middleware'=>['auth'],'namespace'=>'Admin','as'=>'admin.'],function (){
+    Route::get('/','HomeController@index')->name('index');
+    Route::get('setting','HomeController@setting')->name('setting');
 });
 
