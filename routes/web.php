@@ -28,7 +28,7 @@ Route::get(
 )->name('home');
 
 Route::group(
-    ['namespace' => 'Account'],
+    ['namespace' => 'Account','middleware'=>['guest']],
     function () {
         Route::resource('login', 'LoginController')->only('index', 'store');
         Route::resource('register', 'RegisterController')->only('index', 'store');
@@ -36,4 +36,8 @@ Route::group(
 
     }
 );
+
+Route::group(['prefix'=>'admin','middleware'=>['auth'],'namespace'=>'Admin'],function (){
+    Route::get('/','HomeController@index')->name('admin');
+});
 

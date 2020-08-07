@@ -10928,8 +10928,55 @@ a.text-dark:focus {
   }
 }
 
+:root {
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none !important;
+  color: #333;
+}
+
+.w35 {
+  width: 35px;
+}
+
 .account {
   width: 100vw;
   height: 100vh;
+}
+
+.admin {
+  background: url(/images/admin.jpg);
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.admin .quick-menu .logo img {
+  max-width: 350px;
+}
+
+.admin .quick-menu .menus a {
+  width: 7.5rem;
+  padding: 10px 25px;
+  color: #333;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.admin .quick-menu .menus a:hover {
+  opacity: 1;
+}
+
+.admin .quick-menu .menus a i {
+  margin-bottom: 5px;
+}
+
+.admin .admin-setting h6 {
+  border-left: solid 5px #333;
+}
+
+.admin .admin-setting .system-menu {
+  width: 8rem;
 }
 
