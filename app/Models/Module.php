@@ -9,4 +9,7 @@ class Module extends Model
     protected $fillable=[
         'title','version','name','description'
     ];
+    public function package(){
+        return $this->belongsToMany(Package::class);
+    }
 }

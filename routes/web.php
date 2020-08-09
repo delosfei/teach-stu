@@ -56,6 +56,8 @@ Route::group(
         Route::get('module/install/{name}', 'ModuleController@install')->name('module.install');
         Route::delete('module/uninstall/{module:name}', 'ModuleController@uninstall')->name('module.uninstall');
 
+        Route::resource('package','PackageController');
+
     }
 );
 

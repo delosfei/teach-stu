@@ -25,7 +25,7 @@
             <i class="fa fa-2x d-block fa-users" aria-hidden="true"></i>
             用户组管理
         </div>
-        <a href="/"
+        <a href="{{route('admin.package.index')}}"
             class="system-menu d-flex flex-column justify-content-center align-items-center bg-white shadow-sm rounded border p-3  mr-3">
             <i class="fa fa-2x d-block fa-comments-o" aria-hidden="true"></i>
             服务套餐

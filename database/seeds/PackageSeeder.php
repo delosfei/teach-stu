@@ -13,7 +13,7 @@ class PackageSeeder extends Seeder
     public function run()
     {
         Package::create([
-            'name'=>'体验套餐'
+            'title'=>'体验套餐'
         ]);
     }
 }

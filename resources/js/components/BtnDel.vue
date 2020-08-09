@@ -1,6 +1,6 @@
 <template>
     <div>
-        <a href="#" @click.prevent="del" class="btn btn-danger btn-sm">{{ title }}</a>
+        <a href="#" @click.prevent="del" class="btn btn-secondary btn-sm">{{ title }}</a>
     </div>
 </template>
 

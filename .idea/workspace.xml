@@ -14,67 +14,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52426d7e-9439-4f4f-9273-bb22fa4378d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Config/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Config/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Console/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Database/Migrations/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Database/Seeders/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Database/Seeders/EduDatabaseSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Database/factories/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Entities/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Http/Controllers/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Http/Controllers/EduController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Http/Middleware/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Http/Requests/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Providers/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Providers/EduServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/assets/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/assets/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/lang/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/static/preview.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/layouts/master.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Routes/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Routes/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Routes/web.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Tests/Feature/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Tests/Unit/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/module.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/webpack.mix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ModuleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Module.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/ModuleService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/modules.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ModuleFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_09_092239_create_modules_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/ModuleSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules_statuses.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/edu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/edu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/Edu/static/preview.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/BtnDel.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/module/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/module/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/teach-stu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/teach-stu.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_09_141655_create_module_package_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/ModuleSelect.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/package/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/package/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/package/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/package/nav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/System/PackageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PackageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PackageRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PackageRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Module.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Package.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Package.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/ModuleService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ModuleService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/Input.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_01_134822_create_packages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_01_134822_create_packages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PackageSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PackageSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/BtnDel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/BtnDel.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/account/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/setting.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/captcha.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/captcha.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/input.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/input.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,17 +189,19 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Edu/Resources/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/package" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\15066\code\teach-stu\resources\views\package" />
       <recent name="C:\Users\15066\code\teach-stu\Modules\Edu\Resources\static" />
       <recent name="C:\Users\15066\code\teach-stu\resources\views\admin" />
       <recent name="C:\Users\15066\code\teach-stu\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\15066\code\teach-stu\resources\views\components\form" />
       <recent name="C:\Users\15066\code\teach-stu\app\Http\Controllers\Admin" />
       <recent name="C:\Users\15066\code\teach-stu\resources\views\layouts" />
       <recent name="C:\Users\15066\code\teach-stu\resources\views\layouts\admin" />
@@ -276,6 +242,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="518" y="15" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596955962350">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="518" y="15" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596955962350" />
     <state x="542" y="167" key="FileChooserDialogImpl" timestamp="1596764067873">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -284,9 +254,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="300" y="58" key="SettingsEditor/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596768720255" />
-    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1596940125428">
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1596984216640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596940125428" />
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1596984216640" />
   </component>
 </project>
