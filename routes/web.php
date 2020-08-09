@@ -30,20 +30,32 @@ Route::get(
 Route::group(
     ['namespace' => 'Account'],
     function () {
-        Route::resource('login', 'LoginController')->only('index', 'store')->names([
-            'index'=>'login'
-        ]);
-        Route::get('logout','LoginController@logout')->name('logout');
-        Route::resource('register', 'RegisterController')->only('index', 'store')->names([
-            'index'=>'register'
-        ]);
+        Route::resource('login', 'LoginController')->only('index', 'store')->names(
+            [
+                'index' => 'login',
+            ]
+        );
+        Route::get('logout', 'LoginController@logout')->name('logout');
+        Route::resource('register', 'RegisterController')->only('index', 'store')->names(
+            [
+                'index' => 'register',
+            ]
+        );
         Route::post('register/code', 'RegisterController@code')->middleware(['throttle:1,1']);
 
     }
 );
 
-Route::group(['prefix'=>'admin','middleware'=>['auth'],'namespace'=>'Admin','as'=>'admin.'],function (){
-    Route::get('/','HomeController@index')->name('index');
-    Route::get('setting','HomeController@setting')->name('setting');
-});
+Route::group(
+    ['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'Admin', 'as' => 'admin.'],
+    function () {
+        Route::get('/', 'HomeController@index')->name('index');
+        Route::get('setting', 'HomeController@setting')->name('setting');
+
+        Route::get('module', 'ModuleController@index')->name('module.index');
+        Route::get('module/install/{name}', 'ModuleController@install')->name('module.install');
+        Route::delete('module/uninstall/{module:name}', 'ModuleController@uninstall')->name('module.uninstall');
+
+    }
+);
 

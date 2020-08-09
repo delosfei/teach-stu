@@ -19,7 +19,7 @@
     </div>
 
     <div class="bg-white rounded shadow m-3 p-3 {{route_class()}}" id="app">
-
+        @include('layouts.message')
         @yield('content')
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center mt-5">

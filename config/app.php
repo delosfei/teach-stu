@@ -136,6 +136,7 @@ return [
 
     'providers' => [
         'Mews\Captcha\CaptchaServiceProvider',
+        HieuLe\Active\ActiveServiceProvider::class,
 
 
 
@@ -193,6 +194,8 @@ return [
     */
 
     'aliases' => [
+        'Active' => HieuLe\Active\Facades\Active::class,
+        //
 
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
