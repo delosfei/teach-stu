@@ -15,7 +15,7 @@ class CreateGroupsTable extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->char('name')->unique()->comment('组名称');
+            $table->char('title')->unique()->comment('组名称');
             $table->tinyInteger('site_nums')->default(3)->comment('可创建的站点数量');
             $table->boolean('is_default')->default(false)->comment('是否为默认组');
             $table->smallInteger('days')->default(365)->comment('可用天数');

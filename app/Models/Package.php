@@ -10,6 +10,9 @@ class Package extends Model
 
     public function modules()
     {
-        return $this->belongsToMany(Module::class);
+        return $this->belongsToMany(Module::class)->withTimestamps();
+    }
+    public function groups(){
+        return $this->belongsToMany(Group::class);
     }
 }

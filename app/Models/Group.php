@@ -6,5 +6,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Group extends Model
 {
-    protected $fillable=['name','site_nums','days'];
+    protected $fillable = ['title', 'site_nums', 'days'];
+
+    public function packages()
+    {
+        return $this->belongsToMany(Package::class)->withTimestamps();
+    }
+
+    public function hasPackage(Package $package)
+    {
+        return $this->packages->contains($package);
+    }
+
+    public function getModulesAttribute()
+    {
+        return $this->packages()->with('modules')->get()->mapWithKeys(
+            function ($package) {
+                return $package->modules;
+            }
+        );
+    }
 }
