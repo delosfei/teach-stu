@@ -14,22 +14,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52426d7e-9439-4f4f-9273-bb22fa4378d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/GroupRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_09_232406_create_group_package_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/group/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/group/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/group/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/group/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/group/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/System/GroupController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/GroupController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Group.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Package.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Package.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_03_080346_create_groups_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_03_080346_create_groups_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/GroupSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/GroupSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ConfigController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/AdminMiddleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Attachment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/UploadService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ConfigFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_10_225603_create_configs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_10_232753_create_attachments_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ConfigSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/ko4Y1RozkVb3X7v3yChrNYhxMsVNhp6JeyBiQJ0g.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/ImageSingle.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/form/image.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/form/textarea.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/config/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +164,7 @@
       <path value="$PROJECT_DIR$/vendor/moontoast/math" />
       <path value="$PROJECT_DIR$/vendor/nwidart/laravel-modules" />
       <path value="$PROJECT_DIR$/vendor/hieu-le/active" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fkZDo4Npot7G81hGRmCd1BXGdZ" />
@@ -184,18 +184,18 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\15066\code\teach-stu\app\Http\Controllers\Admin" />
+      <recent name="C:\Users\15066\code\teach-stu\resources\views\components\form" />
+      <recent name="C:\Users\15066\code\teach-stu\resources\views\layouts" />
+      <recent name="C:\Users\15066\code\teach-stu\resources\views\layouts\admin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\15066\code\teach-stu\resources\views\group" />
       <recent name="C:\Users\15066\code\teach-stu\resources\views\package" />
       <recent name="C:\Users\15066\code\teach-stu\Modules\Edu\Resources\static" />
       <recent name="C:\Users\15066\code\teach-stu\resources\views\admin" />
       <recent name="C:\Users\15066\code\teach-stu\public\images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\15066\code\teach-stu\app\Http\Controllers\Admin" />
-      <recent name="C:\Users\15066\code\teach-stu\resources\views\components\form" />
-      <recent name="C:\Users\15066\code\teach-stu\resources\views\layouts" />
-      <recent name="C:\Users\15066\code\teach-stu\resources\views\layouts\admin" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
