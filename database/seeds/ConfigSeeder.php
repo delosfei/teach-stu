@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Config;
 
 class ConfigSeeder extends Seeder
 {
@@ -10,7 +11,13 @@ class ConfigSeeder extends Seeder
      * @return void
      */
     public function run()
+
     {
-        //
+        Config::create(['config' => [
+            'title' => '后盾人',
+            'logo' => '/images/logo.png',
+            'copyright' => '后盾人 人人做后盾<br/>
+            Powered by hdcms v6 © 2014-2020 www.hdcms.com'
+        ]]);
     }
 }

@@ -47,7 +47,7 @@ Route::group(
 );
 
 Route::group(
-    ['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'Admin', 'as' => 'admin.'],
+    ['prefix' => 'admin', 'middleware' => ['auth','admin'], 'namespace' => 'Admin', 'as' => 'admin.'],
     function () {
         Route::get('/', 'HomeController@index')->name('index');
         Route::get('setting', 'HomeController@setting')->name('setting');
@@ -58,6 +58,13 @@ Route::group(
 
         Route::resource('package','PackageController');
         Route::resource('group','GroupController');
+
+        Route::get('config', 'ConfigController@edit')->name('config.edit');
+        Route::put('config', 'ConfigController@update')->name('config.update');
+        Route::post('upload', 'ConfigController@upload')->name('config.upload');
+
+        Route::get('my', 'MyController@edit')->name('my.edit');
+        Route::put('my', 'MyController@update')->name('my.update');
 
     }
 );

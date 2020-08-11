@@ -6,7 +6,8 @@
            class="form-control {{ $attributes['class']??'' }} @error( $attributes['name'] )is-invalid @enderror"
            name="{{ $attributes['name'] }}" id="{{ $attributes['name'] }}"
            placeholder="{{ $attributes['placeholder'] }}"
-           value="{{ old($attributes['name'],$attributes['value']??'') }}">
+           value="{{ old($attributes['name'], $attributes['value']??'') }}"
+           onfocus="this.classList.remove('is-invalid')">
 
     @error( $attributes['name'] )
     <strong class="invalid-feedback">{{ $message }}</strong>

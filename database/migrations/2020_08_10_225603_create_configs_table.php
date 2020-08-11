@@ -15,6 +15,7 @@ class CreateConfigsTable extends Migration
     {
         Schema::create('configs', function (Blueprint $table) {
             $table->id();
+            $table->json('config')->comment('系统配置');
             $table->timestamps();
         });
     }
