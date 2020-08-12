@@ -151,6 +151,7 @@ return [
         'code'=>'验证码',
         'account' => '账户',
         'captcha' => '图形验证码',
+        'domain' => '域名',
         //
         'name' => '名称',
         'username' => '用户名',

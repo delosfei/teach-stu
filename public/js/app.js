@@ -3562,6 +3562,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     title: {
@@ -3570,6 +3572,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     action: {
       required: true,
       type: String
+    },
+    className: {
+      "default": 'btn btn-secondary btn-sm'
     }
   },
   methods: {
@@ -101264,7 +101269,7 @@ var render = function() {
     _c(
       "a",
       {
-        staticClass: "btn btn-secondary btn-sm",
+        class: _vm.className,
         attrs: { href: "#" },
         on: {
           click: function($event) {
@@ -101273,7 +101278,8 @@ var render = function() {
           }
         }
       },
-      [_vm._v(_vm._s(_vm.title))]
+      [_vm._t("default", [_vm._v("删除")])],
+      2
     )
   ])
 }

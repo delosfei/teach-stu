@@ -1,9 +1,9 @@
 <div class="quick-menu d-flex justify-content-between align-items-center m-3 pt-5">
     <div class="logo">
-        <a href="{{ route('admin.index') }}"><img src="{{ config('admin.logo') }}"></a>
+        <a href="{{ route('admin') }}"><img src="{{ config('admin.logo') }}"></a>
     </div>
     <div class="menus d-flex">
-        <a href="{{ route('admin.index') }}"
+        <a href="{{ route('admin') }}"
            class="d-flex flex-column bg-white shadow rounded  align-items-center justify-content-center ml-3">
             <i class="fa fa-sitemap fa-2x" aria-hidden="true"></i>
             <span>网站管理</span>

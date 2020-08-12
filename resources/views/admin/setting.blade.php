@@ -36,16 +36,16 @@
 <div class="mb-5">
     <h6 class="mb-3 pl-3 bl-5">系统管理</h6>
     <section class="d-flex">
-        <div
+        <a href="{{route('site.site.index')}}"
             class="system-menu d-flex flex-column justify-content-center align-items-center bg-white shadow-sm rounded border p-3  mr-3">
             <i class="fa fa-2x d-block fa-sitemap" aria-hidden="true"></i>
             站点列表
-        </div>
-        <div
+        </a>
+        <a href="{{route('admin.config.edit')}}"
             class="system-menu d-flex flex-column justify-content-center align-items-center bg-white shadow-sm rounded border p-3  mr-3">
             <i class="fa fa-2x d-block fa-tachometer" aria-hidden="true"></i>
             系统配置
-        </div>
+        </a>
     </section>
 </div>
 @endsection

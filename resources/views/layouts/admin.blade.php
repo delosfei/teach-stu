@@ -9,10 +9,11 @@
     <title>@yield('title','后盾人')</title>
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    @stack('styles')
 </head>
 
 <body>
-<div class="admin">
+<div class="system">
     @include('layouts.admin.header')
 
     <div class="d-sm-block d-none">

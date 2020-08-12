@@ -46,10 +46,11 @@ Route::group(
     }
 );
 
+Route::get('admin', 'Site\SiteController@index')->name('admin')->middleware('auth');
 Route::group(
-    ['prefix' => 'admin', 'middleware' => ['auth','admin'], 'namespace' => 'Admin', 'as' => 'admin.'],
+    ['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'Admin', 'as' => 'admin.'],
     function () {
-        Route::get('/', 'HomeController@index')->name('index');
+
         Route::get('setting', 'HomeController@setting')->name('setting');
 
         Route::get('module', 'ModuleController@index')->name('module.index');
@@ -69,3 +70,6 @@ Route::group(
     }
 );
 
+Route::group(['prefix' => 'site', 'middleware' => ['auth'], 'namespace' => 'Site', 'as' => 'site.'], function () {
+    Route::resource('site', 'SiteController');
+});

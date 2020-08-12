@@ -10946,17 +10946,17 @@ a {
   height: 100vh;
 }
 
-.admin {
+.system {
   background: url(/images/admin.jpg);
   min-height: 100vh;
   background-size: cover;
 }
 
-.admin .quick-menu .logo img {
+.system .quick-menu .logo img {
   max-width: 350px;
 }
 
-.admin .quick-menu .menus a {
+.system .quick-menu .menus a {
   width: 7.5rem;
   padding: 10px 25px;
   color: #333;
@@ -10964,19 +10964,19 @@ a {
   transition: 0.5s;
 }
 
-.admin .quick-menu .menus a:hover {
+.system .quick-menu .menus a:hover {
   opacity: 1;
 }
 
-.admin .quick-menu .menus a i {
+.system .quick-menu .menus a i {
   margin-bottom: 5px;
 }
 
-.admin .admin-setting h6 {
+.system .admin-setting h6 {
   border-left: solid 5px #333;
 }
 
-.admin .admin-setting .system-menu {
+.system .admin-setting .system-menu {
   width: 8rem;
 }
 
