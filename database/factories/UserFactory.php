@@ -23,6 +23,7 @@ $factory->define(User::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail,
         'mobile'=>$faker->phoneNumber,
         'email_verified_at' => now(),
+        'group_id'=>1,
         'password' => bcrypt('admin888'), // password
         'remember_token' => Str::random(10),
     ];

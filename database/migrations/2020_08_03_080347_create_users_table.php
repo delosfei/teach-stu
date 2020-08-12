@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('github')->nullable()->comment('github账号');
             $table->string('weibo')->nullable()->comment('微博账号');
             $table->timestamp('email_verified_at')->nullable();
+            $table->foreignId('group_id')->nullable()->constrained()->onDelete('set null');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
