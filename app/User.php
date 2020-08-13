@@ -61,4 +61,16 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Group::class);
     }
+
+    public function scopeSearch($query, $name)
+    {
+        if(empty($name))
+            return $query;
+
+        return $query->orWhere('email', 'like', "%{$name}%")
+            ->orWhere('mobile', 'like', "%{$name}%")
+            ->orWhere('name', 'like', "%{$name}%")
+            ->orWhere('id', $name);
+    }
+
 }

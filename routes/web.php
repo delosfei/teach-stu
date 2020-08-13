@@ -72,5 +72,10 @@ Route::group(
 
 Route::group(['prefix' => 'site', 'middleware' => ['auth'], 'namespace' => 'Site', 'as' => 'site.'], function () {
     Route::resource('site', 'SiteController');
+    Route::post('{site}/admin/search', 'AdminController@search')->name('admin.search');
+    Route::get('{site}/admin/add/{user}', 'AdminController@add')->name('admin.add');
     Route::resource('{site}/admin', 'AdminController');
+
+
+
 });

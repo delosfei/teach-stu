@@ -31,11 +31,13 @@ _axios.interceptors.request.use(function (config) {
 
 _axios.interceptors.response.use(function (response) {
     loading.close()
-    Message({
-        message: response.data.message,
-        type: 'success'
-    });
-    return response;
+    if (response.data.message) {
+        Message({
+            message: response.data.message,
+            type: 'success'
+        });
+    }
+    return response.data;
 }, function (error) {
     loading.close()
     let status = error.response.status;
@@ -45,7 +47,7 @@ _axios.interceptors.response.use(function (response) {
             store.commit('setErrors', data.errors)
             break
         default:
-            let message=data.message?data.message:httpStatus(status)
+            let message = data.message ? data.message : httpStatus(status)
             Message({
                 message,
                 type: 'error'

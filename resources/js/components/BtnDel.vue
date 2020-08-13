@@ -19,7 +19,7 @@ export default {
                 type: 'warning'
             }).then(async () => {
                 await this.axios.delete(this.action)
-                location.reload(true)
+                 location.reload(true)
             }).catch(() => {
 
             })
