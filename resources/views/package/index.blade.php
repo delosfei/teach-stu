@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
     @include('package.nav')
-    @include('layouts.message')
+
     <table class="table table-bordered mt-3 shadow-sm">
         <thead>
         <tr>

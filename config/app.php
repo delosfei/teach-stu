@@ -135,6 +135,7 @@ return [
     */
 
     'providers' => [
+        Spatie\Permission\PermissionServiceProvider::class,
         'Mews\Captcha\CaptchaServiceProvider',
         HieuLe\Active\ActiveServiceProvider::class,
 

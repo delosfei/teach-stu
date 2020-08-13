@@ -45,14 +45,4 @@
 
 @endsection
 
-@push('scripts')
-    <script>
-        // window.vue = {
-        //     data() {
-        //         return {
-        //             dialogVisible: false
-        //         };
-        //     }
-        // };
-    </script>
-@endpush
+

@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2020-08-09 09:35:17.
+    * Generated on 2020-08-13 18:14:08.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -49,6 +49,9 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'Nwidart\Modules\Contracts\ActivatorInterface' => \Nwidart\Modules\Activators\FileActivator::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\LaravelFileRepository::class,
+        'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
+        'Spatie\Permission\Contracts\Role' => \Spatie\Permission\Models\Role::class,
+        'Spatie\Permission\PermissionRegistrar' => \Spatie\Permission\PermissionRegistrar::class,
         'Whoops\Handler\HandlerInterface' => \Facade\Ignition\ErrorPage\IgnitionWhoopsHandler::class,
         'active' => \HieuLe\Active\Active::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
@@ -217,6 +220,9 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'Nwidart\Modules\Contracts\ActivatorInterface' => \Nwidart\Modules\Activators\FileActivator::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\LaravelFileRepository::class,
+        'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
+        'Spatie\Permission\Contracts\Role' => \Spatie\Permission\Models\Role::class,
+        'Spatie\Permission\PermissionRegistrar' => \Spatie\Permission\PermissionRegistrar::class,
         'Whoops\Handler\HandlerInterface' => \Facade\Ignition\ErrorPage\IgnitionWhoopsHandler::class,
         'active' => \HieuLe\Active\Active::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
@@ -385,6 +391,9 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'Nwidart\Modules\Contracts\ActivatorInterface' => \Nwidart\Modules\Activators\FileActivator::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\LaravelFileRepository::class,
+        'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
+        'Spatie\Permission\Contracts\Role' => \Spatie\Permission\Models\Role::class,
+        'Spatie\Permission\PermissionRegistrar' => \Spatie\Permission\PermissionRegistrar::class,
         'Whoops\Handler\HandlerInterface' => \Facade\Ignition\ErrorPage\IgnitionWhoopsHandler::class,
         'active' => \HieuLe\Active\Active::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
@@ -553,6 +562,9 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'Nwidart\Modules\Contracts\ActivatorInterface' => \Nwidart\Modules\Activators\FileActivator::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\LaravelFileRepository::class,
+        'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
+        'Spatie\Permission\Contracts\Role' => \Spatie\Permission\Models\Role::class,
+        'Spatie\Permission\PermissionRegistrar' => \Spatie\Permission\PermissionRegistrar::class,
         'Whoops\Handler\HandlerInterface' => \Facade\Ignition\ErrorPage\IgnitionWhoopsHandler::class,
         'active' => \HieuLe\Active\Active::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
@@ -721,6 +733,9 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'Nwidart\Modules\Contracts\ActivatorInterface' => \Nwidart\Modules\Activators\FileActivator::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\LaravelFileRepository::class,
+        'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
+        'Spatie\Permission\Contracts\Role' => \Spatie\Permission\Models\Role::class,
+        'Spatie\Permission\PermissionRegistrar' => \Spatie\Permission\PermissionRegistrar::class,
         'Whoops\Handler\HandlerInterface' => \Facade\Ignition\ErrorPage\IgnitionWhoopsHandler::class,
         'active' => \HieuLe\Active\Active::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
@@ -889,6 +904,9 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'Nwidart\Modules\Contracts\ActivatorInterface' => \Nwidart\Modules\Activators\FileActivator::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\LaravelFileRepository::class,
+        'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
+        'Spatie\Permission\Contracts\Role' => \Spatie\Permission\Models\Role::class,
+        'Spatie\Permission\PermissionRegistrar' => \Spatie\Permission\PermissionRegistrar::class,
         'Whoops\Handler\HandlerInterface' => \Facade\Ignition\ErrorPage\IgnitionWhoopsHandler::class,
         'active' => \HieuLe\Active\Active::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
@@ -1057,6 +1075,9 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'Nwidart\Modules\Contracts\ActivatorInterface' => \Nwidart\Modules\Activators\FileActivator::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\LaravelFileRepository::class,
+        'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
+        'Spatie\Permission\Contracts\Role' => \Spatie\Permission\Models\Role::class,
+        'Spatie\Permission\PermissionRegistrar' => \Spatie\Permission\PermissionRegistrar::class,
         'Whoops\Handler\HandlerInterface' => \Facade\Ignition\ErrorPage\IgnitionWhoopsHandler::class,
         'active' => \HieuLe\Active\Active::class,
         'auth' => \Illuminate\Auth\AuthManager::class,
@@ -1225,6 +1246,9 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'Nwidart\Modules\Contracts\ActivatorInterface' => \Nwidart\Modules\Activators\FileActivator::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\LaravelFileRepository::class,
+        'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
+        'Spatie\Permission\Contracts\Role' => \Spatie\Permission\Models\Role::class,
+        'Spatie\Permission\PermissionRegistrar' => \Spatie\Permission\PermissionRegistrar::class,
         'Whoops\Handler\HandlerInterface' => \Facade\Ignition\ErrorPage\IgnitionWhoopsHandler::class,
         'active' => \HieuLe\Active\Active::class,
         'auth' => \Illuminate\Auth\AuthManager::class,

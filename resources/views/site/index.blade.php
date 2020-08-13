@@ -57,7 +57,7 @@
                                 class="fa fa-pencil-square-o"></i>
                             编辑
                         </a>
-                        <a href="/" class="text-muted mr-2">
+                        <a href="{{route('site.role.index',$site)}}" class="text-muted mr-2">
                             <i class="fa fa-user-secret" aria-hidden="true">角色管理</i>
                         </a>
 

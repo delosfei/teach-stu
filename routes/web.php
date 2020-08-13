@@ -75,7 +75,5 @@ Route::group(['prefix' => 'site', 'middleware' => ['auth'], 'namespace' => 'Site
     Route::post('{site}/admin/search', 'AdminController@search')->name('admin.search');
     Route::get('{site}/admin/add/{user}', 'AdminController@add')->name('admin.add');
     Route::resource('{site}/admin', 'AdminController');
-
-
-
+    Route::resource('{site}/role', 'RoleController');
 });

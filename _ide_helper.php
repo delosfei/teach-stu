@@ -3,13 +3,200 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 7.22.4 on 2020-08-09 09:35:14.
+ * Generated for Laravel 7.22.4 on 2020-08-13 18:14:05.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
  */
+
+namespace HieuLe\Active\Facades { 
+
+    /**
+     * Active facade class
+     *
+     * @author Hieu Le
+     */ 
+    class Active {
+        
+        /**
+         * Update the route and request instances
+         *
+         * @param \Route $route
+         * @param \Request $request
+         * @static 
+         */ 
+        public static function updateInstances($route, $request)
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->updateInstances($route, $request);
+        }
+        
+        /**
+         * Get the active class if the condition is not falsy
+         *
+         * @param $condition
+         * @param string $activeClass
+         * @param string $inactiveClass
+         * @return string 
+         * @static 
+         */ 
+        public static function getClassIf($condition, $activeClass = 'active', $inactiveClass = '')
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->getClassIf($condition, $activeClass, $inactiveClass);
+        }
+        
+        /**
+         * Check if the URI of the current request matches one of the specific URIs
+         *
+         * @param array|string $uris
+         * @return bool 
+         * @static 
+         */ 
+        public static function checkUri($uris)
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->checkUri($uris);
+        }
+        
+        /**
+         * Check if the current URI matches one of specific patterns (using `Str::is`)
+         *
+         * @param array|string $patterns
+         * @return bool 
+         * @static 
+         */ 
+        public static function checkUriPattern($patterns)
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->checkUriPattern($patterns);
+        }
+        
+        /**
+         * Check if one of the following condition is true:
+         * + the value of $value is `false` and the current querystring contain the key $key
+         * + the value of $value is not `false` and the current value of the $key key in the querystring equals to $value
+         * + the value of $value is not `false` and the current value of the $key key in the querystring is an array that
+         * contains the $value
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return bool 
+         * @static 
+         */ 
+        public static function checkQuery($key, $value)
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->checkQuery($key, $value);
+        }
+        
+        /**
+         * Check if the name of the current route matches one of specific values
+         *
+         * @param array|string $routeNames
+         * @return bool 
+         * @static 
+         */ 
+        public static function checkRoute($routeNames)
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->checkRoute($routeNames);
+        }
+        
+        /**
+         * Check the current route name with one or some patterns
+         *
+         * @param array|string $patterns
+         * @return bool 
+         * @static 
+         */ 
+        public static function checkRoutePattern($patterns)
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->checkRoutePattern($patterns);
+        }
+        
+        /**
+         * Check if the parameter of the current route has the correct value
+         *
+         * @param $param
+         * @param $value
+         * @return bool 
+         * @static 
+         */ 
+        public static function checkRouteParam($param, $value)
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->checkRouteParam($param, $value);
+        }
+        
+        /**
+         * Return 'active' class if current route action match one of provided action names
+         *
+         * @param array|string $actions
+         * @return bool 
+         * @static 
+         */ 
+        public static function checkAction($actions)
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->checkAction($actions);
+        }
+        
+        /**
+         * Check if the current controller class matches one of specific values
+         *
+         * @param array|string $controllers
+         * @return bool 
+         * @static 
+         */ 
+        public static function checkController($controllers)
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->checkController($controllers);
+        }
+        
+        /**
+         * Get the current controller method
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getMethod()
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->getMethod();
+        }
+        
+        /**
+         * Get the current action string
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getAction()
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->getAction();
+        }
+        
+        /**
+         * Get the current controller class
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getController()
+        {
+                        /** @var \HieuLe\Active\Active $instance */
+                        return $instance->getController();
+        }
+         
+    }
+ 
+}
 
 namespace Illuminate\Support\Facades { 
 
@@ -15648,193 +15835,6 @@ namespace Facade\Ignition\Facades {
  
 }
 
-namespace HieuLe\Active\Facades { 
-
-    /**
-     * Active facade class
-     *
-     * @author Hieu Le
-     */ 
-    class Active {
-        
-        /**
-         * Update the route and request instances
-         *
-         * @param \Route $route
-         * @param \Request $request
-         * @static 
-         */ 
-        public static function updateInstances($route, $request)
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->updateInstances($route, $request);
-        }
-        
-        /**
-         * Get the active class if the condition is not falsy
-         *
-         * @param $condition
-         * @param string $activeClass
-         * @param string $inactiveClass
-         * @return string 
-         * @static 
-         */ 
-        public static function getClassIf($condition, $activeClass = 'active', $inactiveClass = '')
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->getClassIf($condition, $activeClass, $inactiveClass);
-        }
-        
-        /**
-         * Check if the URI of the current request matches one of the specific URIs
-         *
-         * @param array|string $uris
-         * @return bool 
-         * @static 
-         */ 
-        public static function checkUri($uris)
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->checkUri($uris);
-        }
-        
-        /**
-         * Check if the current URI matches one of specific patterns (using `Str::is`)
-         *
-         * @param array|string $patterns
-         * @return bool 
-         * @static 
-         */ 
-        public static function checkUriPattern($patterns)
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->checkUriPattern($patterns);
-        }
-        
-        /**
-         * Check if one of the following condition is true:
-         * + the value of $value is `false` and the current querystring contain the key $key
-         * + the value of $value is not `false` and the current value of the $key key in the querystring equals to $value
-         * + the value of $value is not `false` and the current value of the $key key in the querystring is an array that
-         * contains the $value
-         *
-         * @param string $key
-         * @param mixed $value
-         * @return bool 
-         * @static 
-         */ 
-        public static function checkQuery($key, $value)
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->checkQuery($key, $value);
-        }
-        
-        /**
-         * Check if the name of the current route matches one of specific values
-         *
-         * @param array|string $routeNames
-         * @return bool 
-         * @static 
-         */ 
-        public static function checkRoute($routeNames)
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->checkRoute($routeNames);
-        }
-        
-        /**
-         * Check the current route name with one or some patterns
-         *
-         * @param array|string $patterns
-         * @return bool 
-         * @static 
-         */ 
-        public static function checkRoutePattern($patterns)
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->checkRoutePattern($patterns);
-        }
-        
-        /**
-         * Check if the parameter of the current route has the correct value
-         *
-         * @param $param
-         * @param $value
-         * @return bool 
-         * @static 
-         */ 
-        public static function checkRouteParam($param, $value)
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->checkRouteParam($param, $value);
-        }
-        
-        /**
-         * Return 'active' class if current route action match one of provided action names
-         *
-         * @param array|string $actions
-         * @return bool 
-         * @static 
-         */ 
-        public static function checkAction($actions)
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->checkAction($actions);
-        }
-        
-        /**
-         * Check if the current controller class matches one of specific values
-         *
-         * @param array|string $controllers
-         * @return bool 
-         * @static 
-         */ 
-        public static function checkController($controllers)
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->checkController($controllers);
-        }
-        
-        /**
-         * Get the current controller method
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getMethod()
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->getMethod();
-        }
-        
-        /**
-         * Get the current action string
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getAction()
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->getAction();
-        }
-        
-        /**
-         * Get the current controller class
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getController()
-        {
-                        /** @var \HieuLe\Active\Active $instance */
-                        return $instance->getController();
-        }
-         
-    }
- 
-}
-
 namespace Intervention\Image\Facades { 
 
     /**
@@ -16582,6 +16582,8 @@ namespace Nwidart\Modules\Facades {
 
 
 namespace  { 
+
+    class Active extends \HieuLe\Active\Facades\Active {}
 
     class App extends \Illuminate\Support\Facades\App {}
 
@@ -19532,8 +19534,6 @@ namespace  {
     class View extends \Illuminate\Support\Facades\View {}
 
     class Flare extends \Facade\Ignition\Facades\Flare {}
-
-    class Active extends \HieuLe\Active\Facades\Active {}
 
     class Image extends \Intervention\Image\Facades\Image {}
 
