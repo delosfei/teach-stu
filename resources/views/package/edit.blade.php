@@ -27,7 +27,7 @@
 
 @endsection
 
-@push('js')
+@push('scripts')
     <script>
         window.modules = @json($modules);
         window.selected = @json($package->modules->pluck('id'))

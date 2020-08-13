@@ -26,7 +26,7 @@
 
 @endsection
 
-@push('js')
+@push('scripts')
     <script>
         window.modules = @json($modules)
     </script>

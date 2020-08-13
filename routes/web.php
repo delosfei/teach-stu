@@ -51,7 +51,7 @@ Route::group(
     ['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'Admin', 'as' => 'admin.'],
     function () {
 
-        Route::get('setting', 'HomeController@setting')->name('setting');
+        Route::view('system', 'system.setting')->name('setting');
 
         Route::get('module', 'ModuleController@index')->name('module.index');
         Route::get('module/install/{name}', 'ModuleController@install')->name('module.install');
@@ -72,4 +72,5 @@ Route::group(
 
 Route::group(['prefix' => 'site', 'middleware' => ['auth'], 'namespace' => 'Site', 'as' => 'site.'], function () {
     Route::resource('site', 'SiteController');
+    Route::resource('{site}/admin', 'AdminController');
 });

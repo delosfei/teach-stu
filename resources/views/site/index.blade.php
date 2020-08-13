@@ -46,9 +46,13 @@
                             微信公众号
                         </a> <a href="/site/1/user" class="text-muted mr-2"><i class="fa fa-user-o"></i>
                             用户列表
-                        </a> <a href="/site/1/admin" class="text-muted mr-2"><i class="fa fa-user-circle-o"></i>
+                        </a>
+
+                        <a href="{{route('site.admin.index',$site)}}" class="text-muted mr-2"><i
+                                class="fa fa-user-circle-o"></i>
                             操作员设置
                         </a>
+
                         <a href="{{route('site.site.edit',$site)}}" class="text-muted mr-2"><i
                                 class="fa fa-pencil-square-o"></i>
                             编辑

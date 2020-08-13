@@ -21,4 +21,7 @@ class Site extends Model
     {
         return $this->belongsTo(Module::class);
     }
+    public function admins(){
+        return $this->belongsToMany(User::class,'admin_site');
+    }
 }

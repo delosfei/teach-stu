@@ -9,7 +9,6 @@ import store from './store';
 import Vue from 'vue';
 
 
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -31,5 +30,6 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
 
 const app = new Vue({
     el: '#app',
+    mixins: [window.vue || {}],
     store
 });

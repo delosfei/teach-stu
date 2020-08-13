@@ -115242,6 +115242,7 @@ files.keys().map(function (key) {
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
   el: '#app',
+  mixins: [window.vue || {}],
   store: _store__WEBPACK_IMPORTED_MODULE_0__["default"]
 });
 

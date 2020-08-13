@@ -29,7 +29,7 @@
         <span>Copyright © 2010-2020 www.faw4s.com</span>
     </div>
 </div>
-@stack('js')
+@stack('scripts')
 <script src="{{ mix('/js/app.js') }}"></script>
 </body>
 
