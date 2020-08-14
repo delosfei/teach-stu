@@ -21,7 +21,7 @@
                 <td>
                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
                         <a href="{{ route("site.role.edit",[$site,$role]) }}" class="btn btn-info">编辑</a>
-                        <a href="/" class="btn btn-primary">设置权限</a>
+                        <a href="{{route('site.permission.edit',[$site,$role])}}" class="btn btn-primary">设置权限</a>
 
 
 

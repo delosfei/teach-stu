@@ -2,7 +2,8 @@
 
 namespace App\Services;
 
-use App\Models\Module;
+use App\Models\Module as Model;
+use App\Models\Site;
 
 class ModuleService
 {
@@ -12,7 +13,7 @@ class ModuleService
 
         return $modules->map(
             function ($module) {
-                return $module = $this->find($module->getname());
+                return $this->find($module->getName());
             }
         );
     }
@@ -29,15 +30,29 @@ class ModuleService
     public function find(string $name)
     {
         $module = \Module::find($name);
-        $config = include $module->getPath().'/Config/config.php';
-        $model = Module::where('name', $name)->first();
+        $config = $this->config($module, 'config');
+        $model = Model::where('name', $name)->first();
 
         return $config + [
                 'preview' => '/modules/'.$name.'/static/preview.jpg',
                 'id' => $model['id'] ?? 0,
+                'menus' => $this->config($module, 'menus'),
                 'installed' => (bool)$model,
                 'module' => $module,
             ];
     }
-}
 
+    protected function config($module, $name)
+    {
+        return include $module->getPath().'/Config/'.$name.'.php';
+    }
+
+    public function getSiteModules(Site $site)
+    {
+        return $site->user->group->modules->map(
+            function ($module) {
+                return $this->find($module['name']);
+            }
+        );
+    }
+}
