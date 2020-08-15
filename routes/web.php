@@ -83,4 +83,5 @@ Route::group(['prefix' => 'site', 'middleware' => ['auth'], 'namespace' => 'Site
     Route::put('{site}/permission/{role}', 'PermissionController@update')->name('permission.update');
 
     Route::get('{site}/module','ModuleController@index')->name('module.index');
+    Route::get('{site}/module/{module}','ModuleController@entry')->name('module.entry');
 });
