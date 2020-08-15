@@ -74,9 +74,13 @@ Route::group(['prefix' => 'site', 'middleware' => ['auth'], 'namespace' => 'Site
     Route::resource('site', 'SiteController');
     Route::post('{site}/admin/search', 'AdminController@search')->name('admin.search');
     Route::get('{site}/admin/add/{user}', 'AdminController@add')->name('admin.add');
+    Route::get('{site}/admin/role/{user}', 'AdminController@role')->name('admin.role');
+    Route::put('{site}/admin/role/{user}', 'AdminController@updateRole')->name('admin.role.update');
     Route::resource('{site}/admin', 'AdminController');
     Route::resource('{site}/role', 'RoleController');
 
     Route::get('{site}/permission/{role}', 'PermissionController@edit')->name('permission.edit');
     Route::put('{site}/permission/{role}', 'PermissionController@update')->name('permission.update');
+
+    Route::get('{site}/module','ModuleController@index')->name('module.index');
 });

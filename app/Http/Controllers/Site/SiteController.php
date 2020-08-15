@@ -11,6 +11,11 @@ use Illuminate\Http\Request;
 class SiteController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->authorizeResource(Site::class, 'site');
+    }
+
     public function index()
     {
         $sites=Site::all();

@@ -11,6 +11,10 @@ use Spatie\Permission\Models\Role;
 
 class RoleController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(Site::class, 'site');			//<===authorizeResource所有资源方法都验证
+    }
 
     public function index(Site $site)
     {

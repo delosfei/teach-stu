@@ -27,7 +27,7 @@
                 <td class="align-middle">{{ $admin['mobile'] }}</td>
                 <td class="align-middle text-right pr-2">
                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                        <a href="/" class="btn btn-info">设置角色</a>
+                        <a href="{{route('site.admin.role',[$site,$admin])}}" class="btn btn-info">设置角色</a>
                         <btn-del action="{{route('site.admin.destroy',[$site,$admin])}}">删除</btn-del>
                     </div>
                 </td>
@@ -37,10 +37,10 @@
     </table>
 
     <user-search action="{{route('site.admin.search',$site)}}" v-slot="{user}" title="添加管理员">
-            <div class="btn-group btn-group-sm" role="group">
+        <div class="btn-group btn-group-sm" role="group">
 
-                <a :href="'/site/{{$site['id']}}/admin/add/' + user.id" class="btn btn-info">设为管理员</a>
-            </div>
+            <a :href="'/site/{{$site['id']}}/admin/add/' + user.id" class="btn btn-info">设为管理员</a>
+        </div>
     </user-search>
 
 @endsection

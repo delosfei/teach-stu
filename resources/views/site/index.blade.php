@@ -5,6 +5,11 @@
         <a href="{{route('site.site.create')}}" class="btn btn-info mb-3">
             <i class="fa fa-plus" aria-hidden="true"></i> 添加网站
         </a>
+        @if (user()->isSuperAdmin)
+            <span class="text-secondary">
+            <i class="fa fa-info-circle" aria-hidden="true"></i> 您是超级管理员
+        </span>
+        @endif
 
         @foreach ($sites as $site)
             <div class="card mb-3 shadow-sm">
@@ -15,9 +20,9 @@
                             <span class="badge badge-info">{{$package['title']}}</span>
                         @endforeach
                     </div>
-                    <div>
+                    <a href="{{route('site.module.index',$site)}}">
                         <i class="fa fa-cog" aria-hidden="true"></i> 应用扩展
-                    </div>
+                    </a>
                 </div>
                 <div class="card-body">
                     <i class="fa fa-rss fa-3x mr-3" aria-hidden="true"></i>
@@ -25,6 +30,7 @@
                 </div>
                 <div class="card-footer text-muted d-flex flex-column flex-sm-row justify-content-between ">
                     <div class="small mb-2">
+                        #{{$site->id}}
                         创建时间: {{$site->created_at}} 站长: {{$site->user->name}} 所属组: {{$site->user->group->title}}
                         默认模块：{{$site->module->title??''}}
                     </div>
@@ -36,34 +42,32 @@
                                 访问首页
                             </a>
                         @endif
+                        @can('update', $site)
+                            <a href="/site/1/config" class="text-muted mr-2"><i aria-hidden="true"
+                                                                                class="fa fa-check-circle-o"></i>
+                                网站配置
+                            </a>
 
-                        <a href="" class="text-muted mr-2"><i class="fa fa-life-ring"></i>
-                            更新缓存
-                        </a> <a href="/site/1/config" class="text-muted mr-2"><i aria-hidden="true"
-                                                                                 class="fa fa-check-circle-o"></i>
-                            网站配置
-                        </a> <a href="" class="text-muted mr-2"><i class="fa fa-comment-o"></i>
-                            微信公众号
-                        </a> <a href="/site/1/user" class="text-muted mr-2"><i class="fa fa-user-o"></i>
-                            用户列表
-                        </a>
+                            <a href="" class="text-muted mr-2"><i class="fa fa-comment-o"></i>
+                                微信公众号
+                            </a>
 
-                        <a href="{{route('site.admin.index',$site)}}" class="text-muted mr-2"><i
-                                class="fa fa-user-circle-o"></i>
-                            操作员设置
-                        </a>
+                            <a href="{{route('site.admin.index',$site)}}" class="text-muted mr-2"><i
+                                    class="fa fa-user-circle-o"></i>
+                                操作员设置
+                            </a>
 
-                        <a href="{{route('site.site.edit',$site)}}" class="text-muted mr-2"><i
-                                class="fa fa-pencil-square-o"></i>
-                            编辑
-                        </a>
-                        <a href="{{route('site.role.index',$site)}}" class="text-muted mr-2">
-                            <i class="fa fa-user-secret" aria-hidden="true">角色管理</i>
-                        </a>
-
-                        <btn-del action="{{route('site.site.destroy',$site)}}" class-name="text-muted">
-                            <i class="fa fa-trash" aria-hidden="true"> 删除</i>
-                        </btn-del>
+                            <a href="{{route('site.role.index',$site)}}" class="text-muted mr-2">
+                                <i class="fa fa-user-secret" aria-hidden="true">角色管理</i>
+                            </a>
+                            <a href="{{route('site.site.edit',$site)}}" class="text-muted mr-2"><i
+                                    class="fa fa-pencil-square-o"></i>
+                                编辑
+                            </a>
+                            <btn-del action="{{route('site.site.destroy',$site)}}" class-name="text-muted">
+                                <i class="fa fa-trash" aria-hidden="true"> 删除</i>
+                            </btn-del>
+                        @endcan
                     </div>
                 </div>
             </div>

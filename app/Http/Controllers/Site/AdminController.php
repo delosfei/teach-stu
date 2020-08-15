@@ -36,9 +36,36 @@ class AdminController extends Controller
 
     public function destroy(Site $site, User $admin)
     {
+        $site->roles->map(function ($role) use($admin){
+           $admin->removeRole($role['name']);
+        });
 
         $site->admins()->detach([$admin['id']]);
 
-        return response()->json(['message'=>'删除管理员成功']);
+        return response()->json(['message' => '删除管理员成功']);
     }
+
+    public function role(Site $site, User $user)
+    {
+        return view('admin.role', compact('site', 'user'));
+    }
+
+    public function updateRole(Request $request, Site $site, User $user)
+    {
+        //删除无效的旧角色
+        $site->roles->filter(
+            function ($role) use ($request) {
+                return !in_array($role['id'], $request->input('roles', []));
+            }
+        )->map(
+            function ($role) use ($user) {
+                $user->removeRole($role['name']);
+            }
+        );
+
+        $user->assignRole($request->roles);
+
+        return back()->with('success', '角色设置成功');
+    }
+
 }
