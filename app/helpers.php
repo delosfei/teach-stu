@@ -51,3 +51,16 @@ function module(string $name= null)
     }
     return $module;
 }
+function access($permission, $force = true, $site = null, $module = null)
+{
+    $site = $site ?? site();
+    $module = $module ?? module();
+
+    if (user()->isSuperAdmin || site()['user_id'] == user('id')) return true;
+
+    $status =  user()->can(permission_name($permission, $site, $module));
+    if ($status === false && $force) {
+        abort(403, '没有操作权限');
+    }
+    return $status;
+}

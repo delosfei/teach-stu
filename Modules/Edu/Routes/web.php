@@ -16,6 +16,8 @@ Route::prefix('edu')->group(function() {
 });
 
 
-Route::group(['prefix'=>'Edu/admin','middleware'=>['auth'],'namespace'=>'Admin','as'=>'edu.admin.'],function() {
+Route::group(['prefix'=>'Edu/admin','middleware'=>['auth','admin'],'namespace'=>'Admin','as'=>'edu.admin.'],function() {
     Route::get('/', 'AdminController@index')->name('admin');
+    Route::resource('tag','TagController');
+
 });
