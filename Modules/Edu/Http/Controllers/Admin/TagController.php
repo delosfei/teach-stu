@@ -5,6 +5,7 @@ namespace Modules\Edu\Http\Controllers\Admin;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Edu\Entities\Tag;
 
 class TagController extends Controller
 {
@@ -14,8 +15,9 @@ class TagController extends Controller
      */
     public function index()
     {
-     //   access('tags');
-        return view('edu::tag.index');
+        access('tags');
+        $tags=Tag::all();
+        return view('edu::tag.index',compact('tags'));
     }
 
     /**
@@ -34,7 +36,10 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        foreach($request->input('tags.title')as $title){
+            Tag::create(['title'=>$title,'site_id'=>site()['id']]);
+        }
+        return back()->with('success','标签添加成功');
     }
 
     /**
