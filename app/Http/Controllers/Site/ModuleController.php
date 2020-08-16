@@ -16,12 +16,12 @@ class ModuleController extends Controller
         return view('site_module.index', compact('site'));
     }
 
-    public function entry(Site $site, Module $module)
+    public function entry(Site $site, $moduleName)
     {
         site($site);
-        module($module);
+        module($moduleName);
 
-        return redirect($module['name'].'/admin');
+        return redirect($moduleName.'/admin');
     }
 
 

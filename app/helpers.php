@@ -35,16 +35,18 @@ function site(Site $site = null)
     return $site;
 }
 
-function module(Module $module= null)
+function module(string $name= null)
 {
-    if (is_null($module)) {
+    if (is_null($name)) {
         $module = session('module');
     }
-    if ($module instanceof Module) {
-
+    if (!is_null($name)) {
+        $module=app(ModuleService::class)->find($name);
+        unset($module['module']);
+         //   dd($module);
         session(['module' => $module]);
     }
-    if (!($module instanceof Module)) {
+    if (empty($module)) {
         abort(404, '站点不存在');
     }
     return $module;
