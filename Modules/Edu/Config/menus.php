@@ -13,8 +13,8 @@ return [
         'show' => true,
         'icon' => 'fas fa-box',
         'items' => [
-            ['title' => '课程列表', 'route' => 'Edu.admin.lesson.create.index', 'permission' => 'lesson-index'],
-            ['title' => '课程列表', 'route' => 'Edu.admin.lesson.create.create', 'permission' => 'add-lesson'],
+            ['title' => '课程列表', 'route' => route('edu.admin.lesson.index'), 'permission' => 'lesson-index'],
+            ['title' => '发布课程', 'route' => route('edu.admin.lesson.create'), 'permission' => 'add-lesson'],
         ],
     ],
     [

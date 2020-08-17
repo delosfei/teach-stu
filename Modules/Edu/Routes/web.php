@@ -19,5 +19,5 @@ Route::prefix('edu')->group(function() {
 Route::group(['prefix'=>'Edu/admin','middleware'=>['auth','admin'],'namespace'=>'Admin','as'=>'edu.admin.'],function() {
     Route::get('/', 'AdminController@index')->name('index');
     Route::resource('tag','TagController');
-
+    Route::resource('lesson','LessonController');
 });

@@ -168,7 +168,9 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid" id="app">
-                @yield('content')
+                <div class="bg-white p-3 border pb-5" style="margin-bottom:10rem">
+                    @yield('content')
+                </div>
 
             </div>
             <!-- /.container-fluid -->
