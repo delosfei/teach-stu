@@ -14,10 +14,11 @@
                 <div class="row mt-3">
                     <div class="col-12 col-sm-2" v-for="(tag,index) in tags" :key="index">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="tags[title][]" v-model="tag.title"/>
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon2">删除</span>
-                            </div>
+                            <input type="text" class="form-control" name="title[]" v-model="tag.title"/>
+                            <input type="hidden" class="form-control" name="ids[]" v-model="tag.id"/>
+                            <a href="#" class="input-group-append" @click.prevent="del(index)">
+                                <span class="input-group-text" id="basic-addon2">X</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +40,10 @@
             },
             methods: {
                 add() {
-                    this.tags.push({title: ''})
+                    this.tags.push({id:0,title: ''})
+                },
+                del(i){
+                    this.tags.splice(i,1)
                 }
             }
         }
