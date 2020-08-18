@@ -5,6 +5,7 @@ namespace Modules\Edu\Http\Controllers\Admin;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Edu\Entities\Lesson;
 
 class LessonController extends Controller
 {
@@ -21,9 +22,10 @@ class LessonController extends Controller
      * Show the form for creating a new resource.
      * @return Renderable
      */
-    public function create()
+    public function create(Lesson $lesson)
     {
-        return view('edu::lesson.create');
+
+        return view('edu::lesson.create',compact('lesson'));
     }
 
     /**
@@ -31,9 +33,14 @@ class LessonController extends Controller
      * @param Request $request
      * @return Renderable
      */
-    public function store(Request $request)
+    public function store(Request $request,Lesson $lesson)
     {
-        //
+        $lesson->fill($request->input());
+        $lesson->status = $request->has('status');
+        $lesson->site_id = site()['id'];
+        $lesson->user_id = user('id');
+        $lesson->save();
+
     }
 
     /**

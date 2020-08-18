@@ -21,3 +21,6 @@ Route::group(['prefix'=>'Edu/admin','middleware'=>['auth','admin'],'namespace'=>
     Route::resource('tag','TagController');
     Route::resource('lesson','LessonController');
 });
+
+
+

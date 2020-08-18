@@ -85,3 +85,8 @@ Route::group(['prefix' => 'site', 'middleware' => ['auth'], 'namespace' => 'Site
     Route::get('{site}/module','ModuleController@index')->name('module.index');
     Route::get('{site}/module/{module}','ModuleController@entry')->name('module.entry');
 });
+
+
+Route::group(['prefix' => 'common',  'namespace' => 'Common', 'as' => 'common.'], function () {
+    Route::post('upload','UploadController@make')->name('upload');
+});
