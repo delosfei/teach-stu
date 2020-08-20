@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class CreateAttachmentsTable extends Migration
+class CreateEduTagRelationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,11 @@ class CreateAttachmentsTable extends Migration
     public function up()
     {
         Schema::create(
-            'attachments',
+            'edu_tag_relation',
             function (Blueprint $table) {
                 $table->id();
-                $table->string('name');
-                $table->string('path');
-                $table->string('extension');
+                $table->foreignId('tag_id')->constrained('edu_tags')->onDelete('cascade');
+                $table->morphs('relation');
                 $table->timestamps();
             }
         );
@@ -32,6 +31,6 @@ class CreateAttachmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('attachments');
+        Schema::dropIfExists('edu_tag_relation');
     }
 }

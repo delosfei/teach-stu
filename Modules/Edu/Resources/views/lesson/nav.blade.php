@@ -7,6 +7,6 @@
     <a class="nav-link {{ active_class(if_route('edu.admin.lesson.create')) }}" href="{{ route('edu.admin.lesson.create') }}">添加课程</a>
     @if( active_class(if_route('edu.admin.lesson.edit')) )
         <a class="nav-link {{ active_class(if_route('edu.admin.lesson.edit')) }}"
-           href="{{route('edu.admin.lesson.edit')}}">编辑课程</a>
+           href="{{route('edu.admin.lesson.edit',$lesson)}}">编辑课程</a>
     @endif
 </nav>

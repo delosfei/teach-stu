@@ -168,6 +168,7 @@
             <!-- Begin Page Content -->
             <div class="container-fluid" id="app">
                 <div class="bg-white p-3 border pb-5" style="margin-bottom:10rem">
+                    @include('layouts.message')
                     @yield('content')
                 </div>
 

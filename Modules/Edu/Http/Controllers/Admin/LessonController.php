@@ -6,6 +6,9 @@ use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Modules\Edu\Entities\Lesson;
+use Modules\Edu\Entities\Tag;
+use Modules\Edu\Entities\Video;
+use Modules\Edu\Http\Requests\LessonRequest;
 
 class LessonController extends Controller
 {
@@ -15,7 +18,8 @@ class LessonController extends Controller
      */
     public function index()
     {
-        return view('edu::lesson.index');
+        $lessons=Lesson::where('site_id',site()['id'])->paginate();
+        return view('edu::lesson.index',compact('lessons'));
     }
 
     /**
@@ -24,8 +28,9 @@ class LessonController extends Controller
      */
     public function create(Lesson $lesson)
     {
+        $tags = Tag::all();
 
-        return view('edu::lesson.create',compact('lesson'));
+        return view('edu::lesson.create', compact('lesson', 'tags'));
     }
 
     /**
@@ -33,12 +38,43 @@ class LessonController extends Controller
      * @param Request $request
      * @return Renderable
      */
-    public function store(Request $request,Lesson $lesson)
+    public function store(LessonRequest $request, Lesson $lesson)
     {
+
+        $this->updateLesson($request, $lesson);
+        return redirect()->route('edu.admin.lesson.index')->with('success', '课程保存成功');
+
+    }
+
+    protected function updateLesson($request, $lesson)
+    {
+
         $lesson->fill($request->input());
         $lesson->status = $request->has('status');
         $lesson->site_id = site()['id'];
         $lesson->user_id = user('id');
+        $lesson->save();
+        $lesson->tags()->sync($request->tags);
+        $this->updateVideos($request, $lesson);
+    }
+
+    protected function updateVideos($request, $lesson)
+    {
+
+        $videos=json_decode($request->videos,true);
+
+        $lesson->videos()->whereNotIn('id',collect($videos)->pluck('id'))->delete();
+        foreach ($videos as $i => $video) {
+            if ($video['title'] && $video['path']) {
+                $lesson->videos()->updateOrCreate(
+                    [
+                        'id' => $video['id'],
+                    ],
+                    array_merge($video,['rank' => $i, 'site_id' => site()['id']])
+                );
+            }
+        }
+        $lesson['video_num'] = $lesson->videos->count();
         $lesson->save();
 
     }
@@ -53,34 +89,25 @@ class LessonController extends Controller
         return view('edu::show');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function edit($id)
+
+    public function edit(Lesson $lesson)
     {
-        return view('edu::edit');
+        $tags = Tag::all();
+
+        return view('edu::lesson.edit', compact('lesson', 'tags'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     * @param Request $request
-     * @param int $id
-     * @return Renderable
-     */
-    public function update(Request $request, $id)
+
+    public function update(LessonRequest $request,Lesson $lesson)
     {
-        //
+        $this->updateLesson($request,$lesson);
+        return redirect()->route('edu.admin.lesson.index')->with('success','课程保存成功');
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     * @param int $id
-     * @return Renderable
-     */
-    public function destroy($id)
+    public function destroy(Lesson $lesson)
     {
-        //
+        $lesson->delete();
+        return response()->json(['message' => '删除成功']);
     }
 }

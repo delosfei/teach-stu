@@ -20,6 +20,7 @@ class ModuleController extends Controller
 
 
         $modules=$moduleService->find($name);
+
         $module->create($modules);
         return back()->with('success','模块安装成功');
     }

@@ -14,27 +14,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52426d7e-9439-4f4f-9273-bb22fa4378d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Http/Requests/LessonRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/js/components/LessonVideos.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/lesson/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Common/UploadController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/MuKgsW6kWJcxlcsRaEZDBWRwjjU47NOkN1JTwHzC.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/SoE2FdGapt3omaIos3G6OwfLerVW09aduCaYKDVQ.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/dH1vlEyz0agAKVbcmIHHMDiRwTI4sjMLALgL4ovU.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/mwVrRxWpL8pMYFtWZe4odPoqarkRk6CbNyw3qLdx.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/sRgXSaAjyXlECy5mFupH4rlcACGq1ZInM42XnJCJ.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Edu/Entities/Video.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/lesson/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_03_194916_create_modules_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_06_214619_create_attachments_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_15_014410_create_favorite_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_15_014455_create_favour_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_15_020701_create_followers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_31_203154_create_notifications_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_31_213818_create_activity_log_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/29L2ZE6tltWe0WUbIFUgP9ETsVAZqyKgIwWg3Y7i.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/2ygK4XiRXp1BtH3Grl9JzgrLwxazKWgQg9O8Cswg.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/37Vy7XBkOCVbX3SvY4A6HVNI3N80oy05jGMqaQ3T.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/4WfEaXSxtiN3G7Hw7rNRxTB3xpefXdjjebymnyHt.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/4i7Ybn48E3rfM4yboTdIZ24LIKMSlszMBxPBIEIm.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/Ju2Kuy2R2lOJumilSTM1ARboFukjTep9JvurghRQ.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/KR69FNQEThTOoJwZJL8izgKcU8pu2AzOWldqiszw.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/U3NNS55bebTqYTVzFyMLdaiBJNuEwqJP6bXBNrIF.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/VqlcpzDzO6i0fSsIGRvfLhACtGHQE6nGRn44rMdt.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/a8hP5NjHCsOzNo0f9kC6vVtSefQJYghrb66SNNpe.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/duUH58Lk7IYrTRgXa26R9hSy7toJJua7k0daQ9id.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/oHsuFIUgtN0ZU6DpjBWGrRXGQCPKep4Rwn9vrOwf.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/oYTT1VIywurvsXHUghYtGJQB18Hsw01oZUy6PpCW.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/p7i3srjOTU7mGXm2WNRRVPz9WG54UftyzZJh9bEK.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/qhuR2C5j5Ll8hrBACMJ7gYzUAU9jEEAdBBmVUC0E.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/rrezIjg5vXJ2vpBog5cuj63mmnKdKHL5pLOHJqhK.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/uqdnWzGsUHjc3O3zkBZKqGCE3SpbWHzpXBeJTUEF.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/attachments/20/08/zJRrcfe9ToKIpKtxHivFD6bq1icSq02COHwtE4cj.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/teach-stu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/teach-stu.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Edu/Entities/Lesson.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Entities/Lesson.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Edu/Http/Controllers/Admin/LessonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Http/Controllers/Admin/LessonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Resources/views/lesson/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/lesson/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Edu/Resources/js/components/LessonVideos.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Resources/js/components/LessonVideos.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Edu/Resources/views/lesson/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/lesson/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Edu/Resources/views/lesson/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/lesson/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Edu/Resources/views/lesson/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/lesson/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ModuleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ModuleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Module.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_01_134822_create_packages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_16_130608_create_packages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_03_080346_create_groups_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_19_114310_create_groups_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_03_080347_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_06_193805_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_09_092239_create_modules_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_09_141655_create_module_package_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_03_212540_create_module_package_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_09_232406_create_group_package_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_06_193803_create_group_package_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_10_225603_create_configs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_06_204813_create_configs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_10_232753_create_attachments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Database/Migrations/2020_08_19_101703_create_edu_tag_relation_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_12_133828_create_sites_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_08_195736_create_sites_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_12_170356_create_admin_site_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_08_214116_create_admin_site_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_13_181445_create_permission_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_10_220547_create_permission_tables.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/modules/Edu/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/modules/Edu/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/zh-CN/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/zh-CN/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/form/image.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/image.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/config/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/config/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/module.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/module.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +210,18 @@
       <path value="$PROJECT_DIR$/vendor/nwidart/laravel-modules" />
       <path value="$PROJECT_DIR$/vendor/hieu-le/active" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/vendor/hisorange/browser-detect" />
+      <path value="$PROJECT_DIR$/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/vendor/ua-parser/uap-php" />
+      <path value="$PROJECT_DIR$/vendor/league/pipeline" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect" />
+      <path value="$PROJECT_DIR$/vendor/piwik/device-detector" />
+      <path value="$PROJECT_DIR$/vendor/mustangostang/spyc" />
+      <path value="$PROJECT_DIR$/vendor/mews/purifier" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-activitylog" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fkZDo4Npot7G81hGRmCd1BXGdZ" />
@@ -185,24 +236,24 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Edu/Resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/migrations" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\15066\code\teach-stu\Modules\Edu\Resources\views\lesson" />
       <recent name="C:\Users\15066\code\teach-stu\resources\views\layouts" />
       <recent name="C:\Users\15066\code\teach-stu\resources\views\site" />
       <recent name="C:\Users\15066\code\teach-stu\app\Http\Controllers\Site" />
       <recent name="C:\Users\15066\code\teach-stu\app\Http\Controllers\Admin" />
-      <recent name="C:\Users\15066\code\teach-stu\resources\views\components\form" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\15066\code\teach-stu\database\migrations" />
       <recent name="C:\Users\15066\code\teach-stu\Modules\Edu\Resources" />
       <recent name="C:\Users\15066\code\teach-stu\public\admin2" />
       <recent name="C:\Users\15066\code\teach-stu\Modules\Edu\Config" />
       <recent name="C:\Users\15066\code\teach-stu\resources\views\role" />
-      <recent name="C:\Users\15066\code\teach-stu\resources\views\admin" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -216,6 +267,9 @@
       <workItem from="1596763934304" duration="4791000" />
       <workItem from="1596768781373" duration="5198000" />
       <workItem from="1597587406556" duration="1999000" />
+      <workItem from="1597760663955" duration="4592000" />
+      <workItem from="1597765293433" duration="12000" />
+      <workItem from="1597765430910" duration="20187000" />
     </task>
     <servers />
   </component>
@@ -249,6 +303,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1597585644252" />
+    <state x="577" y="324" key="ComposerInitDialogKey" timestamp="1597765240093">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="577" y="324" key="ComposerInitDialogKey/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1597765240093" />
     <state x="542" y="167" key="FileChooserDialogImpl" timestamp="1596764067873">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -273,10 +331,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="460" y="136" width="615" height="552" key="find.popup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1597324491603" />
-    <state x="622" y="71" width="672" height="676" key="search.everywhere.popup" timestamp="1597748912318">
+    <state x="622" y="71" width="672" height="676" key="search.everywhere.popup" timestamp="1597886515049">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="622" y="71" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1597748912318" />
+    <state x="622" y="71" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1597886515049" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

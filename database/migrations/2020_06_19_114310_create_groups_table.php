@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateConfigsTable extends Migration
+class CreateGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateConfigsTable extends Migration
      */
     public function up()
     {
-        Schema::create('configs', function (Blueprint $table) {
+        Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->json('config')->comment('系统配置');
+            $table->char('title')->unique()->comment('组名称');
+            $table->tinyInteger('site_nums')->default(3)->comment('可创建的站点数量');
+            $table->smallInteger('days')->default(365)->comment('可用天数');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateConfigsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('configs');
+        Schema::dropIfExists('groups');
     }
 }

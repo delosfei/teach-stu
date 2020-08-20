@@ -18,9 +18,10 @@ class CreateUsersTable extends Migration
             $table->string('name')->unique()->comment('昵称');
             $table->string('email')->unique()->nullable()->comment('邮箱');
             $table->string('mobile')->unique()->nullable()->comment('手机号');
-            $table->string('qq')->unique()->nullable()->comment('QQ号');
-            $table->string('github')->nullable()->comment('github账号');
-            $table->string('weibo')->nullable()->comment('微博账号');
+            $table->string('avatar')->nullable()->comment('头像');
+            $table->string('github')->nullable()->comment('GITHUB帐号');
+            $table->string('qq')->nullable()->comment('qq帐号');
+            $table->string('weibo')->nullable()->comment('微博帐号');
             $table->timestamp('email_verified_at')->nullable();
             $table->foreignId('group_id')->nullable()->constrained()->onDelete('set null');
             $table->string('password');

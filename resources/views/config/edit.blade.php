@@ -23,7 +23,7 @@
                 <x-form title="网站名称" name="title" required value="{{ config('admin.title') }}"></x-form>
 
                 <x-form theme="image" title="网站标志" name="logo" action="{{ route('admin.config.upload') }}"
-                        image="{{ config('admin.logo') }}"></x-form>
+                        value="{{ config('admin.logo') }}"></x-form>
 
                 <x-form theme="textarea" title="网站名称" name="copyright" required>
                     {{ config('admin.copyright') }}

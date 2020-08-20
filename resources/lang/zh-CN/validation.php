@@ -148,6 +148,8 @@ return [
     */
 
     'attributes' => [
+        'thumb'=>'缩略图',
+        'free_num'=>'免费数量',
         'code'=>'验证码',
         'account' => '账户',
         'captcha' => '图形验证码',

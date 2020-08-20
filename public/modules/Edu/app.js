@@ -384,7 +384,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _LessonVideos_vue_vue_type_template_id_275fcabb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LessonVideos.vue?vue&type=template&id=275fcabb&scoped=true& */ "./Resources/js/components/LessonVideos.vue?vue&type=template&id=275fcabb&scoped=true&");
+/* harmony import */ var _LessonVideos_vue_vue_type_template_id_275fcabb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LessonVideos.vue?vue&type=template&id=275fcabb& */ "./Resources/js/components/LessonVideos.vue?vue&type=template&id=275fcabb&");
 /* harmony import */ var _LessonVideos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LessonVideos.vue?vue&type=script&lang=js& */ "./Resources/js/components/LessonVideos.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
@@ -396,11 +396,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _LessonVideos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _LessonVideos_vue_vue_type_template_id_275fcabb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _LessonVideos_vue_vue_type_template_id_275fcabb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _LessonVideos_vue_vue_type_template_id_275fcabb___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LessonVideos_vue_vue_type_template_id_275fcabb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "275fcabb",
+  null,
   null
   
 )
@@ -426,19 +426,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./Resources/js/components/LessonVideos.vue?vue&type=template&id=275fcabb&scoped=true&":
-/*!*********************************************************************************************!*\
-  !*** ./Resources/js/components/LessonVideos.vue?vue&type=template&id=275fcabb&scoped=true& ***!
-  \*********************************************************************************************/
+/***/ "./Resources/js/components/LessonVideos.vue?vue&type=template&id=275fcabb&":
+/*!*********************************************************************************!*\
+  !*** ./Resources/js/components/LessonVideos.vue?vue&type=template&id=275fcabb& ***!
+  \*********************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LessonVideos_vue_vue_type_template_id_275fcabb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./LessonVideos.vue?vue&type=template&id=275fcabb&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./Resources/js/components/LessonVideos.vue?vue&type=template&id=275fcabb&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LessonVideos_vue_vue_type_template_id_275fcabb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LessonVideos_vue_vue_type_template_id_275fcabb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./LessonVideos.vue?vue&type=template&id=275fcabb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./Resources/js/components/LessonVideos.vue?vue&type=template&id=275fcabb&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LessonVideos_vue_vue_type_template_id_275fcabb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LessonVideos_vue_vue_type_template_id_275fcabb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LessonVideos_vue_vue_type_template_id_275fcabb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -4327,25 +4327,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      videos: [{
-        title: '1',
-        path: '1'
-      }, {
-        title: '2',
-        path: '2'
-      }, {
-        title: '3',
-        path: '3'
-      }, {
-        title: '4',
-        path: '4'
-      }, {
-        title: '5',
-        path: '5'
-      }, {
-        title: '6',
-        path: '6'
-      }]
+      videos: window.videos
     };
   },
   methods: {
@@ -105430,10 +105412,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./Resources/js/components/LessonVideos.vue?vue&type=template&id=275fcabb&scoped=true&":
-/*!***************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./Resources/js/components/LessonVideos.vue?vue&type=template&id=275fcabb&scoped=true& ***!
-  \***************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./Resources/js/components/LessonVideos.vue?vue&type=template&id=275fcabb&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./Resources/js/components/LessonVideos.vue?vue&type=template&id=275fcabb& ***!
+  \***************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -105490,11 +105472,7 @@ var render = function() {
                           }
                         ],
                         staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          name: "videos[title][]",
-                          placeholder: "请输入视频标题"
-                        },
+                        attrs: { type: "text", placeholder: "请输入视频标题" },
                         domProps: { value: video.title },
                         on: {
                           input: function($event) {
@@ -105518,11 +105496,7 @@ var render = function() {
                           }
                         ],
                         staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          name: "videos[path][]",
-                          placeholder: "请输入视频地址"
-                        },
+                        attrs: { type: "text", placeholder: "请输入视频地址" },
                         domProps: { value: video.path },
                         on: {
                           input: function($event) {
@@ -105584,7 +105558,12 @@ var render = function() {
         },
         [_vm._v("添加视频")]
       )
-    ])
+    ]),
+    _vm._v(" "),
+    _c("textarea", {
+      attrs: { hidden: "", name: "videos" },
+      domProps: { innerHTML: _vm._s(_vm.videos) }
+    })
   ])
 }
 var staticRenderFns = []

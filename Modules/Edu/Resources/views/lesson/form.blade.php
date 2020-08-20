@@ -6,12 +6,16 @@
         <x-form title="标题" name="title" require value="{{ $lesson['title'] }}"></x-form>
 
         <div class="mt-2 mb-2">
-
+            @foreach ($tags as $tag)
+                <label class="mr-2">
+                    <input type="checkbox" name="tags[]" value="{{ $tag['id'] }}"
+                        {{ $lesson->tags->contains($tag) ?'checked':""}}>
+                    {{ $tag['title'] }}
+                </label>
+            @endforeach
         </div>
 
         <x-form theme="textarea" title="视频介绍" name="description" require>{{ $lesson['description'] }}</x-form>
-
-
 
         <x-form theme="image" title="网站标志" name="thumb" action="{{ route('common.upload') }}"
                 value="{{ $lesson['thumb'] }}"></x-form>
@@ -26,6 +30,11 @@
     </div>
 </div>
 
-
 <lesson-videos></lesson-videos>
 <button class="btn btn-primary mt-3">保存</button>
+
+@push('scripts')
+    <script>
+        window.videos = @json($lesson->videos);
+    </script>
+@endpush
