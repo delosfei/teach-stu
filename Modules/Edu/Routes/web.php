@@ -20,6 +20,8 @@ Route::group(['prefix'=>'Edu/admin','middleware'=>['auth','admin'],'namespace'=>
     Route::get('/', 'AdminController@index')->name('index');
     Route::resource('tag','TagController');
     Route::resource('lesson','LessonController');
+    Route::resource('system','SystemController');
+
 });
 
 

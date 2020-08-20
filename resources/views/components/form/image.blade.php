@@ -6,7 +6,7 @@
 
     <div class="{{ $attributes['class']??'' }} @error( $attributes['name'] )is-invalid @enderror">
         <image-single action="{{ $attributes['action'] }}" name="{{ $attributes['name'] }}"
-                      value="{{ old($attributes['name'], $attributes['value']??'') }}"></image-single>
+                      image="{{ old($attributes['name'], $attributes['value']??'') }}"></image-single>
     </div>
 
     @error( $attributes['name'] )

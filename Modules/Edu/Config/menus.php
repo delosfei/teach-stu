@@ -20,8 +20,8 @@ return [
     [
         'title' => '系统课程',
         'items' => [
-            ['title' => '系统课程', 'permission' => 'system'],
-            ['title' => '添加系统课程', 'permission' => 'add-system'],
+            ['title' => '系统课程','route' => route('edu.admin.system.index'), 'permission' => 'system'],
+            ['title' => '添加系统课程','route' => route('edu.admin.system.create'), 'permission' => 'add-system'],
         ]
     ],
     [
