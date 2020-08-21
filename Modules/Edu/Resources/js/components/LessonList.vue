@@ -4,6 +4,7 @@
             课程列表
         </div>
         <div class="card-body">
+
             <table class="table mt-3 table-bordered">
                 <thead>
                 <tr>
@@ -17,59 +18,65 @@
                     <th width="80"></th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr v-for="(lesson,index) in lessons" :key="index">
 
-                    <td>1</td>
-                    <td>2</td>
+                <draggable v-model="lessons" @start="drag = true" @end="drag = false" element="tbody">
+                <tr v-for="(lesson,index) in lessons" :key="lesson.id">
+                    <td>{{lesson.id}}</td>
+                    <td>{{lesson.title}}</td>
                     <td>
-                        <i class="fas fa-check"></i>
+                        <i class="fas fa-check" v-if="lesson.status"></i>
                     </td>
-                    <td>3</td>
-                    <td>44</td>
-                    <td>4</td>
-                    <td>5</td>
+                    <td>{{lesson.favour_count}}</td>
+                    <td>{{lesson.favorite_count}}</td>
+                    <td>{{lesson.video_num}}</td>
+                    <td>{{lesson.created_at}}</td>
                     <td>
                         <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                            <a href="#" class="btn btn-secondary btn-sm" @click.prevent="del(index)">移除</a>
+                            <a href="#" class="btn btn-info" @click.prevent="del(index)">移除</a>
                         </div>
                     </td>
                 </tr>
-                </tbody>
+                </draggable>
+
             </table>
+
         </div>
         <div class="card-footer text-muted">
-            <button class="btn btn-primary btn-sm" @click.prevent="dialogVisible=true">课程选择</button>
+            <button class="btn btn-info btn-sm" @click.prevent="dialogVisible=true">课程选择</button>
         </div>
 
         <el-dialog
             title="课程选择" :visible.sync="dialogVisible" width="60%">
             <lesson-search @add="add"></lesson-search>
         </el-dialog>
-
+        <input hidden name="lessons" v-model="ids" />
     </div>
 </template>
 
 <script>
+import draggable from 'vuedraggable'
+
 import LessonSearch from './LessonSearch'
 
 export default {
     components: {
-        LessonSearch
+        LessonSearch,draggable
     },
     data(){
         return {
             dialogVisible:false,
-            lessons:[
-                {id:1,title:'abd'},
-                {id:2,title:'abd'},
-                {id:3,title:'abd'}
-            ]
+            lessons:window.lessons || []
         }
+    },
+    computed:{
+      ids(){
+          return this.lessons.map(lesson=>lesson.id);
+      }
     },
     methods:{
         add(lesson){
             this.lessons.push(lesson)
+            this.lessons=_.uniqBy(this.lessons,'id')
 
         },
         del(index){

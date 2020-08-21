@@ -770,7 +770,8 @@ __webpack_require__.r(__webpack_exports__);
   open: function open() {
     this.instance = element_ui__WEBPACK_IMPORTED_MODULE_0__["Loading"].service({
       lock: true,
-      text: '加载中'
+      text: '加载中',
+      background: 'rgba(255,255,255,0.9)'
     });
   },
   close: function close() {
@@ -4429,7 +4430,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _LessonSearch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LessonSearch */ "./Resources/js/components/LessonSearch.vue");
+/* harmony import */ var vuedraggable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuedraggable */ "./node_modules/vuedraggable/dist/vuedraggable.common.js");
+/* harmony import */ var vuedraggable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuedraggable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _LessonSearch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LessonSearch */ "./Resources/js/components/LessonSearch.vue");
+//
+//
+//
 //
 //
 //
@@ -4483,28 +4489,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    LessonSearch: _LessonSearch__WEBPACK_IMPORTED_MODULE_0__["default"]
+    LessonSearch: _LessonSearch__WEBPACK_IMPORTED_MODULE_1__["default"],
+    draggable: vuedraggable__WEBPACK_IMPORTED_MODULE_0___default.a
   },
   data: function data() {
     return {
       dialogVisible: false,
-      lessons: [{
-        id: 1,
-        title: 'abd'
-      }, {
-        id: 2,
-        title: 'abd'
-      }, {
-        id: 3,
-        title: 'abd'
-      }]
+      lessons: window.lessons || []
     };
+  },
+  computed: {
+    ids: function ids() {
+      return this.lessons.map(function (lesson) {
+        return lesson.id;
+      });
+    }
   },
   methods: {
     add: function add(lesson) {
       this.lessons.push(lesson);
+      this.lessons = _.uniqBy(this.lessons, 'id');
     },
     del: function del(index) {
       this.lessons.splice(index, 1);
@@ -4523,6 +4530,14 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -4573,17 +4588,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      lessons: [{
-        id: 4,
-        title: 'abd'
-      }, {
-        id: 5,
-        title: 'abd'
-      }, {
-        id: 6,
-        title: 'abd'
-      }]
+      lessons: [],
+      w: ''
     };
+  },
+  methods: {
+    search: function search() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _this.axios.post('/Edu/admin/lesson-search', {
+                  w: _this.w
+                });
+
+              case 2:
+                response = _context.sent;
+                _this.lessons = response;
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    }
   }
 });
 
@@ -105745,64 +105780,91 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "card-body" }, [
-        _c("table", { staticClass: "table mt-3 table-bordered" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "tbody",
-            _vm._l(_vm.lessons, function(lesson, index) {
-              return _c("tr", { key: index }, [
-                _c("td", [_vm._v("1")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("2")]),
-                _vm._v(" "),
-                _vm._m(1, true),
-                _vm._v(" "),
-                _c("td", [_vm._v("3")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("44")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("4")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("5")]),
-                _vm._v(" "),
-                _c("td", [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "btn-group btn-group-sm",
-                      attrs: { role: "group", "aria-label": "Basic example" }
-                    },
-                    [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-secondary btn-sm",
-                          attrs: { href: "#" },
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              return _vm.del(index)
+        _c(
+          "table",
+          { staticClass: "table mt-3 table-bordered" },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "draggable",
+              {
+                attrs: { element: "tbody" },
+                on: {
+                  start: function($event) {
+                    _vm.drag = true
+                  },
+                  end: function($event) {
+                    _vm.drag = false
+                  }
+                },
+                model: {
+                  value: _vm.lessons,
+                  callback: function($$v) {
+                    _vm.lessons = $$v
+                  },
+                  expression: "lessons"
+                }
+              },
+              _vm._l(_vm.lessons, function(lesson, index) {
+                return _c("tr", { key: lesson.id }, [
+                  _c("td", [_vm._v(_vm._s(lesson.id))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(lesson.title))]),
+                  _vm._v(" "),
+                  _c("td", [
+                    lesson.status
+                      ? _c("i", { staticClass: "fas fa-check" })
+                      : _vm._e()
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(lesson.favour_count))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(lesson.favorite_count))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(lesson.video_num))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(lesson.created_at))]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "btn-group btn-group-sm",
+                        attrs: { role: "group", "aria-label": "Basic example" }
+                      },
+                      [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-info",
+                            attrs: { href: "#" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.del(index)
+                              }
                             }
-                          }
-                        },
-                        [_vm._v("移除")]
-                      )
-                    ]
-                  )
+                          },
+                          [_vm._v("移除")]
+                        )
+                      ]
+                    )
+                  ])
                 ])
-              ])
-            }),
-            0
-          )
-        ])
+              }),
+              0
+            )
+          ],
+          1
+        )
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "card-footer text-muted" }, [
         _c(
           "button",
           {
-            staticClass: "btn btn-primary btn-sm",
+            staticClass: "btn btn-info btn-sm",
             on: {
               click: function($event) {
                 $event.preventDefault()
@@ -105830,7 +105892,28 @@ var render = function() {
         },
         [_c("lesson-search", { on: { add: _vm.add } })],
         1
-      )
+      ),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.ids,
+            expression: "ids"
+          }
+        ],
+        attrs: { hidden: "", name: "lessons" },
+        domProps: { value: _vm.ids },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.ids = $event.target.value
+          }
+        }
+      })
     ],
     1
   )
@@ -105859,12 +105942,6 @@ var staticRenderFns = [
         _c("th", { attrs: { width: "80" } })
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [_c("i", { staticClass: "fas fa-check" })])
   }
 ]
 render._withStripped = true
@@ -105889,28 +105966,72 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "card" }, [
-    _vm._m(0),
+    _c("div", { staticClass: "input-group mb-3" }, [
+      _c("input", {
+        directives: [
+          { name: "model", rawName: "v-model", value: _vm.w, expression: "w" }
+        ],
+        staticClass: "form-control",
+        attrs: { type: "text", placeholder: "请输入课程标题或编号" },
+        domProps: { value: _vm.w },
+        on: {
+          keyup: function($event) {
+            if (
+              !$event.type.indexOf("key") &&
+              _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+            ) {
+              return null
+            }
+            return _vm.search($event)
+          },
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.w = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "input-group-append",
+          on: {
+            click: function($event) {
+              $event.preventDefault()
+              return _vm.search($event)
+            }
+          }
+        },
+        [_c("span", { staticClass: "input-group-text" }, [_vm._v("搜索")])]
+      )
+    ]),
     _vm._v(" "),
     _c("table", { staticClass: "table mt-3 table-bordered" }, [
-      _vm._m(1),
+      _vm._m(0),
       _vm._v(" "),
       _c(
         "tbody",
         _vm._l(_vm.lessons, function(lesson) {
           return _c("tr", { key: lesson.id }, [
-            _c("td", [_vm._v("1")]),
+            _c("td", [_vm._v(_vm._s(lesson.id))]),
             _vm._v(" "),
-            _c("td", [_vm._v("2")]),
+            _c("td", [_vm._v(_vm._s(lesson.title))]),
             _vm._v(" "),
-            _vm._m(2, true),
+            _c("td", [
+              lesson.status
+                ? _c("i", { staticClass: "fas fa-check" })
+                : _vm._e()
+            ]),
             _vm._v(" "),
-            _c("td", [_vm._v("3")]),
+            _c("td", [_vm._v(_vm._s(lesson.favour_count))]),
             _vm._v(" "),
-            _c("td", [_vm._v("44")]),
+            _c("td", [_vm._v(_vm._s(lesson.favorite_count))]),
             _vm._v(" "),
-            _c("td", [_vm._v("4")]),
+            _c("td", [_vm._v(_vm._s(lesson.video_num))]),
             _vm._v(" "),
-            _c("td", [_vm._v("5")]),
+            _c("td", [_vm._v(_vm._s(lesson.created_at))]),
             _vm._v(" "),
             _c("td", [
               _c(
@@ -105949,21 +106070,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group mb-3" }, [
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "text", placeholder: "请输入课程标题或编号" }
-      }),
-      _vm._v(" "),
-      _c("div", { staticClass: "input-group-append" }, [
-        _c("span", { staticClass: "input-group-text" }, [_vm._v("搜索")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
         _c("th", [_vm._v("编号")]),
@@ -105983,12 +106089,6 @@ var staticRenderFns = [
         _c("th", { attrs: { width: "80" } })
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [_c("i", { staticClass: "fas fa-check" })])
   }
 ]
 render._withStripped = true

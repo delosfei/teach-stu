@@ -4,6 +4,10 @@
 
     @include('edu::system.nav')
 
-@include('edu::system.form')
+    <form action="{{route('edu.admin.system.store')}}" method="post">
+        @csrf
+        @include('edu::system.form')
+    </form>
+
 
 @endsection

@@ -9,23 +9,22 @@ use Modules\Edu\Entities\Lesson;
 use Modules\Edu\Entities\Tag;
 use Modules\Edu\Entities\Video;
 use Modules\Edu\Http\Requests\LessonRequest;
+use Nwidart\Modules\Commands\ResourceMakeCommand;
 
 class LessonController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     * @return Renderable
-     */
+
     public function index()
     {
         $lessons=Lesson::where('site_id',site()['id'])->paginate();
         return view('edu::lesson.index',compact('lessons'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     * @return Renderable
-     */
+    public function search(Request $request){
+       return Lesson::search($request->w)->limit(10)->get();
+    }
+
+
     public function create(Lesson $lesson)
     {
         $tags = Tag::all();

@@ -2,8 +2,8 @@
     <div class="card">
 
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="请输入课程标题或编号">
-            <div class="input-group-append">
+            <input type="text" class="form-control" placeholder="请输入课程标题或编号" v-model="w" @keyup.enter="search">
+            <div class="input-group-append" @click.prevent="search">
                 <span class="input-group-text">搜索</span>
             </div>
         </div>
@@ -23,15 +23,15 @@
             </thead>
             <tbody>
             <tr v-for="lesson in lessons" :key="lesson.id">
-                <td>1</td>
-                <td>2</td>
+                <td>{{lesson.id}}</td>
+                <td>{{lesson.title}}</td>
                 <td>
-                    <i class="fas fa-check"></i>
+                    <i class="fas fa-check" v-if="lesson.status"></i>
                 </td>
-                <td>3</td>
-                <td>44</td>
-                <td>4</td>
-                <td>5</td>
+                <td>{{lesson.favour_count}}</td>
+                <td>{{lesson.favorite_count}}</td>
+                <td>{{lesson.video_num}}</td>
+                <td>{{lesson.created_at}}</td>
                 <td>
                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
                         <a href="#" class="btn btn-info" @click.prevent="$emit('add',lesson)">添加</a>
@@ -50,10 +50,17 @@ export default {
     data() {
         return {
             lessons: [
-                {id: 4, title: 'abd'},
-                {id: 5, title: 'abd'},
-                {id: 6, title: 'abd'}
-            ]
+
+            ],
+            w: '',
+
+        }
+    },
+    methods: {
+        async search() {
+
+            const response = await this.axios.post('/Edu/admin/lesson-search', {w: this.w});
+            this.lessons = response
         }
     }
 }

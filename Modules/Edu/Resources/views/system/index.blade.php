@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
     @include('edu::system.nav')
 
     <table class="table mt-3 table-bordered">
@@ -10,9 +12,12 @@
             <th>编号</th>
             <th>系统课程名称</th>
             <th>课程介绍</th>
+            <th>作者</th>
             <th>课程数量</th>
             <th>发布时间</th>
             <th width="180"></th>
+
+
         </tr>
         </thead>
         <tbody>
@@ -21,6 +26,7 @@
                 <td>{{ $system['id'] }}</td>
                 <td>{{ $system['title'] }}</td>
                 <td>{{ $system['description'] }}</td>
+                <td>{{ $system->user->name }}</td>
                 <td>0</td>
                 <td>{{ $system['created_at'] }}</td>
                 <td>
