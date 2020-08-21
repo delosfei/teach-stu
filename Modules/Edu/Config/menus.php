@@ -27,8 +27,8 @@ return [
     [
         'title' => '会员订单',
         'items' => [
-            ['title' => '会员套餐', 'permission' => 'pcakage-index'],
-            ['title' => '订单列表', 'permission' => 'orders'],
+            ['title' => '会员套餐','route' => route('edu.admin.subscribe.index'), 'permission' => 'subscribe'],
+            ['title' => '订单列表', 'route' => route('edu.admin.subscribe.index'),'permission' => 'orders'],
         ]
     ]
 ];

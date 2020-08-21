@@ -14,25 +14,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52426d7e-9439-4f4f-9273-bb22fa4378d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Http/Requests/SystemLessonRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Policies/SystemPolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/system/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Edu/Entities/Subscribe.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Edu/Http/Controllers/Admin/SubscribeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Edu/Http/Requests/SubscribeRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Edu/Policies/SubscribePolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/subscribe/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/subscribe/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/subscribe/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/subscribe/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/subscribe/nav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Edu/Config/menus.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Config/menus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Entities/Lesson.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Entities/Lesson.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Entities/System.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Entities/System.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Http/Controllers/Admin/LessonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Http/Controllers/Admin/LessonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Http/Controllers/Admin/SystemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Http/Controllers/Admin/SystemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Resources/js/components/LessonList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Resources/js/components/LessonList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Resources/js/components/LessonSearch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Resources/js/components/LessonSearch.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Resources/js/plugins/loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Resources/js/plugins/loading.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Resources/views/system/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/system/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Resources/views/system/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/system/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Resources/views/system/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/system/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Edu/Resources/views/system/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Resources/views/system/nav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Edu/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Edu/Routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/modules/Edu/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/modules/Edu/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,24 +195,24 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Edu/Resources/views/system" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Edu/Resources/views/subscribe" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\15066\code\teach-stu\Modules\Edu\Resources\views\subscribe" />
+      <recent name="C:\Users\15066\code\teach-stu\Modules\Edu\Resources\views\system" />
+      <recent name="C:\Users\15066\code\teach-stu\database\migrations" />
+      <recent name="C:\Users\15066\code\teach-stu\Modules\Edu\Resources" />
+      <recent name="C:\Users\15066\code\teach-stu\public\admin2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\15066\code\teach-stu\Modules\Edu\Resources\views\lesson" />
       <recent name="C:\Users\15066\code\teach-stu\resources\views\layouts" />
       <recent name="C:\Users\15066\code\teach-stu\resources\views\site" />
       <recent name="C:\Users\15066\code\teach-stu\app\Http\Controllers\Site" />
       <recent name="C:\Users\15066\code\teach-stu\app\Http\Controllers\Admin" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\15066\code\teach-stu\Modules\Edu\Resources\views\system" />
-      <recent name="C:\Users\15066\code\teach-stu\database\migrations" />
-      <recent name="C:\Users\15066\code\teach-stu\Modules\Edu\Resources" />
-      <recent name="C:\Users\15066\code\teach-stu\public\admin2" />
-      <recent name="C:\Users\15066\code\teach-stu\Modules\Edu\Config" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -237,7 +230,7 @@
       <workItem from="1597765293433" duration="12000" />
       <workItem from="1597765430910" duration="37847000" />
       <workItem from="1597923833197" duration="3115000" />
-      <workItem from="1597928862051" duration="20419000" />
+      <workItem from="1597928862051" duration="29939000" />
     </task>
     <servers />
   </component>
@@ -299,10 +292,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="460" y="136" width="615" height="552" key="find.popup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1597324491603" />
-    <state x="622" y="71" width="672" height="676" key="search.everywhere.popup" timestamp="1597982225199">
+    <state x="622" y="71" width="672" height="676" key="search.everywhere.popup" timestamp="1597999505753">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="622" y="71" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1597982225199" />
+    <state x="622" y="71" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1597999505753" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

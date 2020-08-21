@@ -22,8 +22,7 @@ Route::group(['prefix'=>'Edu/admin','middleware'=>['auth','admin'],'namespace'=>
     Route::resource('lesson','LessonController');
     Route::post('lesson-search','LessonController@search')->name('lesson.search');
     Route::resource('system','SystemController');
-
-
+    Route::resource('subscribe','SubscribeController');
 });
 
 
