@@ -22,10 +22,8 @@ Route::get(
 
 Route::get(
     '/',
-    function () {
-        return view('home');
-    }
-)->name('home');
+    'HomeController@entry'
+)->name('home')->middleware('front');
 
 Route::group(
     ['namespace' => 'Account'],
@@ -48,17 +46,16 @@ Route::group(
 
 Route::get('admin', 'Site\SiteController@index')->name('admin')->middleware('auth');
 Route::group(
-    ['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'Admin', 'as' => 'admin.'],
+    ['prefix' => 'admin', 'middleware' => ['auth', 'system'], 'namespace' => 'Admin', 'as' => 'admin.'],
     function () {
 
         Route::view('system', 'system.setting')->name('setting');
-
         Route::get('module', 'ModuleController@index')->name('module.index');
         Route::get('module/install/{name}', 'ModuleController@install')->name('module.install');
         Route::delete('module/uninstall/{module:name}', 'ModuleController@uninstall')->name('module.uninstall');
 
-        Route::resource('package','PackageController');
-        Route::resource('group','GroupController');
+        Route::resource('package', 'PackageController');
+        Route::resource('group', 'GroupController');
 
         Route::get('config', 'ConfigController@edit')->name('config.edit');
         Route::put('config', 'ConfigController@update')->name('config.update');
@@ -70,23 +67,29 @@ Route::group(
     }
 );
 
-Route::group(['prefix' => 'site', 'middleware' => ['auth'], 'namespace' => 'Site', 'as' => 'site.'], function () {
-    Route::resource('site', 'SiteController');
-    Route::post('{site}/admin/search', 'AdminController@search')->name('admin.search');
-    Route::get('{site}/admin/add/{user}', 'AdminController@add')->name('admin.add');
-    Route::get('{site}/admin/role/{user}', 'AdminController@role')->name('admin.role');
-    Route::put('{site}/admin/role/{user}', 'AdminController@updateRole')->name('admin.role.update');
-    Route::resource('{site}/admin', 'AdminController');
-    Route::resource('{site}/role', 'RoleController');
+Route::group(
+    ['prefix' => 'site', 'middleware' => ['auth', 'system'], 'namespace' => 'Site', 'as' => 'site.'],
+    function () {
+        Route::resource('site', 'SiteController');
+        Route::post('{site}/admin/search', 'AdminController@search')->name('admin.search');
+        Route::get('{site}/admin/add/{user}', 'AdminController@add')->name('admin.add');
+        Route::get('{site}/admin/role/{user}', 'AdminController@role')->name('admin.role');
+        Route::put('{site}/admin/role/{user}', 'AdminController@updateRole')->name('admin.role.update');
+        Route::resource('{site}/admin', 'AdminController');
+        Route::resource('{site}/role', 'RoleController');
 
-    Route::get('{site}/permission/{role}', 'PermissionController@edit')->name('permission.edit');
-    Route::put('{site}/permission/{role}', 'PermissionController@update')->name('permission.update');
+        Route::get('{site}/permission/{role}', 'PermissionController@edit')->name('permission.edit');
+        Route::put('{site}/permission/{role}', 'PermissionController@update')->name('permission.update');
 
-    Route::get('{site}/module','ModuleController@index')->name('module.index');
-    Route::get('{site}/module/{module}','ModuleController@entry')->name('module.entry');
-});
+        Route::get('{site}/module', 'ModuleController@index')->name('module.index');
+        Route::get('{site}/module/{module}', 'ModuleController@entry')->name('module.entry');
+    }
+);
 
 
-Route::group(['prefix' => 'common',  'namespace' => 'Common', 'as' => 'common.'], function () {
-    Route::post('upload','UploadController@make')->name('upload');
-});
+Route::group(
+    ['prefix' => 'common', 'namespace' => 'Common', 'as' => 'common.'],
+    function () {
+        Route::post('upload', 'UploadController@make')->name('upload');
+    }
+);

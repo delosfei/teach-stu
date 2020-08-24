@@ -25,5 +25,9 @@ Route::group(['prefix'=>'Edu/admin','middleware'=>['auth','admin'],'namespace'=>
     Route::resource('subscribe','SubscribeController');
 });
 
+Route::group(['prefix'=>'Edu','middleware'=>['front'],'namespace'=>'Front','as'=>'edu.front.'],function (){
+    Route::resource('topic','TopicController');
+});
+
 
 
