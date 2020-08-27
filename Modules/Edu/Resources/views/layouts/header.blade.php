@@ -20,7 +20,7 @@
                         <a href="https://www.houdunren.com/Edu/video" class="nav-link">最近更新</a>
                     </li>
                     <li class="nav-item pr-1">
-                        <a href="https://www.houdunren.com/Edu/topic" class="nav-link">话题讨论</a>
+                        <a href="{{route('edu.front.topic.index')}}" class="nav-link">话题讨论</a>
                     </li>
                     <li class="nav-item pr-1">
                         <a href="https://www.houdunren.com/Edu/sign" class="nav-link">签到打卡</a>
@@ -50,7 +50,7 @@
                             <span class="mr-2 avatar25" style="line-height: 25px; font-size: 18px;">
                                 <img src="https://houdunren-image.oss-cn-qingdao.aliyuncs.com/c37ec0dbe41f96908b2cccac1c2be45e1544263819.jpg" class="rounded" style="width:25px;height: 25px;">
                             </span>
-                            思考者
+                            {{user('name')}}
                         </a>
                         <div aria-labelledby="dropdownId" class="dropdown-menu">
                             <a href="https://www.houdunren.com/member/base" class="dropdown-item mb-2 mt-2">修改资料</a>

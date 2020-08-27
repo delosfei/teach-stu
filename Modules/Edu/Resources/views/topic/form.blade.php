@@ -15,7 +15,8 @@
             </div>
 
             <div id="app">
-                <editor name="content" :content="content"></editor>
+                <editor name="content" error="@error('content'){{ $message }} @enderror" :content="content">
+                </editor>
             </div>
         </div>
         <div class="card-footer text-muted  bg-white">
@@ -26,8 +27,8 @@
 
 @push('scripts')
     <script>
-        window.vue={
-            data:{
+        window.vue = {
+            data: {
                 content:@json($topic->content)
             }
         }

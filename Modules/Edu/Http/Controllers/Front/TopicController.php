@@ -2,57 +2,76 @@
 
 namespace Modules\Edu\Http\Controllers\Front;
 
-use Illuminate\Contracts\Support\Renderable;
+use App\Http\Controllers\Controller;
+use App\User;
+use Auth;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use Illuminate\Http\Response;
 use Modules\Edu\Entities\Tag;
+use Modules\Edu\Entities\Topic;
+use Modules\Edu\Http\Requests\TopicRequest;
 
 class TopicController extends Controller
 {
-
     public function __construct()
     {
-        $this->middleware('auth')->except(['index','show']);
+        $this->middleware('auth')->except(['index', 'show']);
+        // $this->authorizeResource(Topic::class, 'topic');
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('edu::index');
+        $topics = Topic::search($request->w)->latest()->paginate();
+        return view('edu::topic.index', compact('topics'));
     }
 
-    public function create()
+    public function create(Topic $topic)
     {
-        $tags=Tag::all();
-        return view('edu::topic.create',compact('tags'));
+        $tags = Tag::all();
+        return view('edu::topic.create', compact('tags', 'topic'));
     }
 
-
-    public function store(Request $request)
+    public function store(TopicRequest $request, Topic $topic)
     {
-        //
+        $topic['site_id'] = site()['id'];
+        $topic['user_id'] = Auth::id();
+        $topic->fill($request->input())->save();
+
+        $topic->tags()->sync($request->input('tags'));
+
+        return redirect()->route('edu.front.topic.show', $topic)->with('success', '发表成功');
     }
 
-
-    public function show($id)
+    public function show(Topic $topic)
     {
-        return view('edu::show');
+        return view('edu::topic.show', compact('topic'));
     }
 
-
-    public function edit($id)
+    public function edit(Topic $topic)
     {
-        return view('edu::edit');
+        $this->authorize('update', $topic);
+        $tags = Tag::all();
+        return view('edu::topic.edit', compact('topic', 'tags'));
     }
 
-
-    public function update(Request $request, $id)
+    public function update(Request $request, Topic $topic)
     {
-        //
+        $this->authorize('update', $topic);
+        $topic->fill($request->input())->save();
+
+        $topic->tags()->sync($request->input('tags'));
+
+        return redirect()->route('edu.front.topic.show', $topic)->with('success', '贴子修改成功');
     }
 
-
-    public function destroy($id)
+    public function destroy(Request $request, Topic $topic)
     {
-        //
+        $this->authorize('delete', $topic);
+        $topic->delete();
+
+        if ($request->expectsJson())
+            return response()->json(['message' => '删除成功']);
+
+        return redirect()->route('edu.front.topic.index');
     }
 }

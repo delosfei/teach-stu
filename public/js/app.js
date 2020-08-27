@@ -10363,7 +10363,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.avatar-uploader .el-upload {\n    border: 1px dashed #d9d9d9;\n    border-radius: 6px;\n    cursor: pointer;\n    position: relative;\n    overflow: hidden;\n}\n.avatar-uploader .el-upload:hover {\n    border-color: #409eff;\n}\n.avatar-uploader-icon {\n    font-size: 28px;\n    color: #8c939d;\n    width: 178px;\n    height: 178px;\n    line-height: 178px;\n    text-align: center;\n}\n.avatar {\n    /* width: 178px; */\n    height: 150px;\n    display: block;\n}\n", ""]);
+exports.push([module.i, "\n.avatar-uploader .el-upload {\r\n    border: 1px dashed #d9d9d9;\r\n    border-radius: 6px;\r\n    cursor: pointer;\r\n    position: relative;\r\n    overflow: hidden;\n}\n.avatar-uploader .el-upload:hover {\r\n    border-color: #409eff;\n}\n.avatar-uploader-icon {\r\n    font-size: 28px;\r\n    color: #8c939d;\r\n    width: 178px;\r\n    height: 178px;\r\n    line-height: 178px;\r\n    text-align: center;\n}\n.avatar {\r\n    /* width: 178px; */\r\n    height: 150px;\r\n    display: block;\n}\r\n", ""]);
 
 // exports
 
