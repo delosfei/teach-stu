@@ -3,6 +3,7 @@
 namespace Modules\Edu\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+
 use App\User;
 use Auth;
 use Illuminate\Http\Request;
@@ -13,6 +14,7 @@ use Modules\Edu\Http\Requests\TopicRequest;
 
 class TopicController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth')->except(['index', 'show']);

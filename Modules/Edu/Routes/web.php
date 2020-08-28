@@ -27,6 +27,9 @@ Route::group(['prefix'=>'Edu/admin','middleware'=>['auth','admin'],'namespace'=>
 
 Route::group(['prefix'=>'Edu','middleware'=>['front'],'namespace'=>'Front','as'=>'edu.front.'],function (){
     Route::resource('topic','TopicController');
+    Route::resource('lesson','LessonController')->only(['index','show']);
+    Route::resource('video','VideoController');
+
 });
 
 

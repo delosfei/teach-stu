@@ -2,12 +2,14 @@
 
 namespace Modules\Edu\Entities;
 
+use App\Models\Traits\Site;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Parsedown;
 
 class Topic extends Model
 {
+    use Site;
     protected $table = 'edu_topic';
     protected $fillable = ['title', 'content'];
 
@@ -25,7 +27,7 @@ class Topic extends Model
     public function scopeSearch($query,$w=null)
     {
         if($w){
-            return $query->where('title','like',"%{w}%");
+            return $query->where('title','like',"%{$w}%");
         }
         return $query;
     }

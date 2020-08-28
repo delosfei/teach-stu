@@ -2,10 +2,13 @@
 
 namespace Modules\Edu\Entities;
 
+use App\Models\Traits\Site;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Lesson extends Model
 {
+    use Site;
     protected $table = "edu_lessons";
     protected $fillable = [
         'title',
@@ -20,8 +23,12 @@ class Lesson extends Model
     protected $casts = [
         'status' => 'boolean',
     ];
+    /**
+     * @var mixed
+     */
 
-    public function Videos()
+
+    public function videos()
     {
         return $this->hasMany(Video::class);
     }
@@ -34,6 +41,13 @@ class Lesson extends Model
     public function scopeSearch($query, $w)
     {
         return $query->where('id', 'like', "%{$w}%")->orWhere('title', 'like', "%{$w}%");
+
+    }
+    public function scopeSearchTag($query,$tag=null){
+        if (is_null($tag)) return $query;
+        return $this->whereHas('tags',function (Builder $query) use($tag){
+            $query->where('id',$tag);
+        });
 
     }
 

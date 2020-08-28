@@ -14,15 +14,15 @@
 
 </head>
 <body class="front">
-<div>
+<div class="{{route_class()}}">
     @include('edu::layouts.header')
     <div class="container">
         @include('layouts.message')
 
 
     </div>
-    @yield('content')
 
+    @yield('content')
     @include('edu::layouts.footer')
 
 </div>
