@@ -22,6 +22,27 @@ class CreateEduCommentTable extends Migration
         });
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /**
      * Reverse the migrations.
      *

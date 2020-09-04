@@ -6,10 +6,11 @@ use App\Models\Traits\Site;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Parsedown;
+use Modules\Edu\Entities\Traits\Comment;
 
 class Topic extends Model
 {
-    use Site;
+    use Site,Comment;
     protected $table = 'edu_topic';
     protected $fillable = ['title', 'content'];
 

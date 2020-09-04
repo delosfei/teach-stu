@@ -26,21 +26,21 @@
                             </div>
                             <div class="float-right">
                                 <div class="btn-group btn-group-sm">
-{{--                                    @if (is_admin())--}}
-{{--                                        <a href="" class="btn btn-outline-info">--}}
-{{--                                            推荐--}}
-{{--                                        </a>--}}
-{{--                                    @endif--}}
+                                    @if (is_admin())
+                                        <a href="" class="btn btn-outline-info">
+                                            推荐
+                                        </a>
+                                    @endif
                                     @can('update',$topic)
                                         <a href="{{ route('edu.front.topic.edit',$topic) }}"
                                            class="btn btn-outline-success">编辑</a>
                                     @endcan
                                 </div>
                                 <div class="btn-group btn-group-sm align-items-center mt-1 mt-md-0">
-{{--                                    <a href="{{ route('common.favorite',['Topic',$topic['id']]) }}" class="btn--}}
-{{--                                {{ $topic->isFavorite?'btn-info':'btn-outline-secondary' }}">--}}
-{{--                                        <i aria-hidden="true" class="fa fa-heart-o"></i> 收藏--}}
-{{--                                    </a>--}}
+                                    <a href="{{ route('common.favorite',['Topic',$topic['id']]) }}" class="btn
+                                {{ $topic->isFavorite?'btn-info':'btn-outline-secondary' }}">
+                                        <i aria-hidden="true" class="fa fa-heart-o"></i> 收藏
+                                    </a>
 
                                     <button type="button" class="btn btn-outline-secondary">
                                         {{ $topic->favorite_count }}
@@ -65,10 +65,10 @@
                     <div>
                         <div class="mt-5 text-center border-top border-gary pt-5">
                             <div role="group" aria-label="First group" class="favour btn-group mr-2">
-{{--                                <a href="{{ route('common.favour',['Topic',$topic['id']]) }}"--}}
-{{--                                   class="btn {{ $topic->isFavour?'btn-success':'btn-outline-secondary' }}">--}}
-{{--                                    <i class=" fa fa-thumbs-o-up"></i> 点个赞呗--}}
-{{--                                </a>--}}
+                                <a href="{{ route('common.favour',['Topic',$topic['id']]) }}"
+                                   class="btn {{ $topic->isFavour?'btn-success':'btn-outline-secondary' }}">
+                                    <i class=" fa fa-thumbs-o-up"></i> 点个赞呗
+                                </a>
                                 <button type="button"
                                         class="btn {{ $topic->isFavour?'btn-outline-success':'btn-outline-secondary' }}">
                                     {{ $topic->favour_count }}
@@ -77,9 +77,9 @@
                         </div>
                         <div class="favour-list text-center pt-3 w-75 m-auto">
                             <a href="#" class="m-1 d-inline-block">
-{{--                                @foreach ($topic->favours as $user)--}}
-{{--                                    <img src="{{ $user->icon }}" class="rounded-circle avatar35">--}}
-{{--                                @endforeach--}}
+                                @foreach ($topic->favours as $user)
+                                    <img src="{{ $user->icon }}" class="rounded-circle avatar35">
+                                @endforeach
 
                             </a>
                         </div>

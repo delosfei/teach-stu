@@ -39,6 +39,11 @@ export default {
         // this.fullScreenEvent()
     },
     methods: {
+        setEditorValue(){
+
+            this.editor.setValue('')
+        },
+
         initEditor() {
             const Vue = this
             const editor = new Editor({
@@ -56,6 +61,7 @@ export default {
                     change: function () {
                         Vue.$set(Vue.form, 'markdown', editor.getMarkdown())
                         Vue.$set(Vue.form, 'html', editor.getHtml())
+                        Vue.$emit('update:content',editor.getMarkdown())
                     },
                 },
                 hooks: {
