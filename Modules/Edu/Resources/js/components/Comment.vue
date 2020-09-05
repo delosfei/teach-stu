@@ -37,7 +37,7 @@
         <div id="commentForm">
             <div class="card">
                 <div class="card-header"><span>发表评论</span></div>
-                <editor name="content" :content.sync="form.content" ref="editor"></editor>
+                <editor name="content" :content.sync="form.content" ref="editor" initialEditType="wysiwyg" :key="editorId"></editor>
                 {{ form.content }}
                 <div class="card-footer text-muted" @click.prevent="submit">
                     <button type="button" class="btn btn-primary btn-sm d-inline-block">保存</button>
@@ -63,6 +63,7 @@ export default {
                 content: '',
             },
             comments: [],
+            editorId:1,
         }
     },
     mounted() {
@@ -81,6 +82,9 @@ export default {
 
             let {comment} = await this.axios.post(`Edu/${this.model}/${this.id}/comment`, this.form)
             this.comments.push(comment)
+            this.form.content=''
+            this.editorId ++
+
         }
 
     }
