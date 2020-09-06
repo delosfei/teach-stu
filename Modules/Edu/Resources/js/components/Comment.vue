@@ -29,7 +29,8 @@
                     <i aria-hidden="true" class="fa fa-reply"></i>
                     回复
                 </a>
-                <a href="#" class="d-inline-block">
+                <a href="#" class="d-inline-block" v-if="isAdmin || comment.user.id==user.id"
+                   @click.prevent="del(comment,index)">
                     <i class="fas fa-times-circle"></i>
                     删除
                 </a>
@@ -74,7 +75,9 @@ export default {
             },
             comments: [],
             editorId: 122,
-            reply_user: {}
+            reply_user: {},
+            user: {},
+            isAdmin: false
         }
     },
     mounted() {
@@ -82,8 +85,10 @@ export default {
     },
     methods: {
         async load() {
-            let {comments} = await this.axios.get(`Edu/${this.model}/${this.id}/comment`, this.form)
+            let {data: comments, meta: {user, is_admin}} = await this.axios.get(`Edu/${this.model}/${this.id}/comment`)
             this.comments = comments
+            this.user = user;
+            this.isAdmin = is_admin;
         },
         async submit() {
             if (this.form.content.length < 10) {
@@ -91,14 +96,27 @@ export default {
                 return
             }
 
-            let post={...this.form};
-            if(this.reply_user.id)post.reply_user_id=this.reply_user.id;
+            let post = {...this.form};
+            if (this.reply_user.id) post.reply_user_id = this.reply_user.id;
 
-            let {comment} = await this.axios.post(`Edu/${this.model}/${this.id}/comment`,post)
+            let {comment} = await this.axios.post(`Edu/${this.model}/${this.id}/comment`, post)
             this.comments.push(comment)
             this.form.content = ''
             this.editorId++
             this.reply_user = {}
+
+        },
+        async del(comment, index) {
+            this.$confirm('确定删除吗?', '温馨提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+            }).then(async () => {
+                const url = `Edu/${this.model}/${this.id}/comment/${comment.id}`;
+                await this.axios.delete(url)
+                this.comments.splice(index, 1)
+            }).catch(() => {
+            });
 
         }
 
